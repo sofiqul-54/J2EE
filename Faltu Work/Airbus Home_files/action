@@ -1,0 +1,36 @@
+(function(){
+MFB = {}; 
+ MFB.start = function(){
+_Mfb_domain = "www.airbus.com";
+if(typeof _Mfb_useCookie == 'undefined') { window._Mfb_useCookie = true ; }
+MFB.checkEp = "https://room.myfeelback.com/tracking/visitorAcceptance";
+MFB.websiteJs = "https://roomlurl-5637.kxcdn.com/lib/frontend/handy/js/libraries/";
+MFB.websiteStyle = "https://actorssl-5637.kxcdn.com/stylesheet";
+MFB.responsiveStyle = "https://actorssl-5637.kxcdn.com/responsive";
+MFB.themeJs = "https://roomlurl-5637.kxcdn.com/lib/frontend/";
+MFB.protocol = "https";
+MFB.host = "room.myfeelback.com";
+MFB.geoIPUrl = "undefined";
+MFB.cdnHost = "roomlurl-5637.kxcdn.com";
+MFB.geoIPUrl = "https://c7hn3ry3r4.execute-api.us-east-1.amazonaws.com/Prod?lang=";
+MFB.flashUrl = "undefined://undefinedundefined";
+MFB.responsiveStyle = "https://actorssl-5637.kxcdn.com/responsive";
+loaderBackground = "undefined";
+MFB.deployment_timestamp = "undefined";
+CONDITION_CACHE_KEY = "mfb.actor.beta.conditions";
+RESPONDENT_ATTR_CACHE_KEY = "mfb.actor.beta.respondent";
+MFB.timestamp = "1526638528";
+datalayerless = null;
+};
+try{
+if(document.all && !document.addEventListener){	
+throw "ie<9";
+}
+else{
+MFB.start();
+}
+}
+catch(e){
+console.log(e);
+}
+}())

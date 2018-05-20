@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html class="csstransforms no-csstransforms3d csstransitions js no-touch"><head>
+        <meta name="robots" content="noindex,nofollow">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="a_data/3b3d1112a8" type="text/javascript"></script><script src="a_data/nr-1071.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="apple-mobile-web-app-capable" content="YES">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Waterfall for new website (1 row)</title>
+
+        <link rel="stylesheet" href="a_data/base-common.css">
+
+        <!-- Head Slot (start) -->
+        <link rel="stylesheet" href="a_data/base_waterfall.css">
+<style type="text/css">
+html {
+    background: transparent;
+}
+.tile {
+    background: #ffffff;
+    margin-bottom: 0px;
+}
+.tile .tile-user-top,
+.tile .tile-user-top:link,
+.tile .tile-user-top:visited {
+    color: #575656;
+    font-size: 16px;
+}
+.tile .tile-user-bottom,
+.tile .tile-user-bottom:link,
+.tile .tile-user-bottom:visited {
+    color: #575656;
+    font-size: 16px;
+}
+.tile .tile-caption a:link,
+.tile .tile-caption a:visited,
+.tile .tile-html a:link,
+.tile .tile-html a:visited,
+.tile .ecal-url a:link,
+.tile .ecal-url a:visited {
+    color: #00abf0;
+}
+.tile .tile-tags {
+    }
+.tile .tile-title,
+.tile .tile-caption,
+.tile .tile-html,
+.tile .tile-ecal {
+    color: #666666;
+}
+.tile .tile-caption,
+.tile .tile-ecal {
+    font-size: 15px;
+}
+.tile .tile-emoji {
+    width: 15px;
+}
+.tile .tile-html {
+    font-size: 9.9px;
+}
+.tile .tile-title {
+    font-size: 12.45px;
+}
+.spinner {
+    background-image: url('//assetscdn.stackla.com/media/images/widget/loading.gif');
+}
+</style>
+<script type="text/html" id="tpl-tile">
+<div
+    class="{{tile_classes}}"
+    id="{{_id.$id}}"
+    original-url="{{original_url}}"
+    identity="{{source_user_id}}"
+    network="{{source}}"
+    data-href="{{data_href}}"
+    {{#enable_click_through}}data-click-through="{{click_through}}"{{/enable_click_through}}>
+    <div class="tile-content">
+        {{#show_vine}}
+        <div class="tile-video-wrapper">
+            <iframe
+                class="vine-embed"
+                src="{{embed_url}}/embed/simple"
+                width="100%"
+                height="100%"
+                frameborder="0"></iframe>
+            <scr{{!}}ipt async src="//platform.vine.co/static/scripts/embed.js" integrity="sha384-5mQBCkFuLz84uy107vStqUq3exdFYzGXsDlOn4YBGknd2duZJBDKCqRjElnwTpne" crossorigin="anonymous" charset="utf-8"></scr{{!}}ipt>
+            <div class="vine-overlay"></div>
+        </div>
+        {{/show_vine}}
+
+        {{^show_vine}}
+        {{#img_src}}
+        <div class="tile-image-wrapper {{#play_inline_youtube}}play-inline-youtube{{/play_inline_youtube}}">
+            <img
+                src="{{img_src}}"
+                class="{{img_class}}"
+                data-image-width="{{data_image_width}}"
+                data-image-height="{{data_image_height}}"
+                data-image-size="{{data_image_size}}"
+                alt="{{image_alt_text}}" />
+            <div class="tile-media-loading"><span class="tile-media-loading-icon"></span></div>
+
+            {{#show_shopspots}}
+            {{#shopspots}}
+            <span class="tile-shopspot shopspot {{#show_shopspots}}tile-shopspot-wrapper{{/show_shopspots}}"
+                id="tile-shopspot-{{_id}}"
+                style="left:{{coords.0}}%; top:{{coords.1}}%
+                    {{#use_custom_shopspot_icon}}
+                    background-color: transparent;
+                    border-radius: initial;
+                    padding: 0;
+                    {{/use_custom_shopspot_icon}}">
+                <i class="tile-shopspot-icon shopspot fs fs-tag2"
+                    style="{{#use_custom_shopspot_icon}}
+                            background: url({{custom_shopspot_icon}}) center center no-repeat;
+                            background-size: contain;
+                            border-radius: initial;
+                            width: 30px;
+                            height: 30p;
+                    {{/use_custom_shopspot_icon}}"></i>
+            </span>
+            {{/shopspots}}
+            {{/show_shopspots}}
+
+            {{#is_video}}
+            <div class="icon tile-video-icon"></div>
+            {{/is_video}}
+            {{#is_audio}}
+            <div class="icon tile-audio-icon"><i class="fs fs-volume-high"></i></div>
+            {{/is_audio}}
+        </div>
+        {{/img_src}}
+        {{/show_vine}}
+
+        {{^content_only}}
+        {{^anonymous}}
+        {{#avatar}}
+        <div class="tile-avatar-wrapper">
+            <div class="tile-avatar-placeholder">
+                <img src="https://assetscdn.stackla.com/media/images/avatar-mask.png" alt="{{avatar_alt_text}}" />
+            </div>
+            <a class="tile-avatar-link" href="{{avatar_link}}" target="_blank">
+                <img
+                    class="tile-avatar-image avatar-profile-image"
+                    src="{{avatar_url}}"
+                    alt="{{avatar_alt_text}}" />
+            </a>
+        </div>
+        {{/avatar}}
+
+        <div class="tile-belt">
+            <div class="tile-source tile-source-{{source_type}}"><i class="fs fs-{{source_type}}"></i></div>
+            <div class="tile-timestamp">{{formatted_time}}</div>
+            <div class="tile-user-info">
+                <div class="tile-user">
+                    {{#avatar_link}}
+                    <a class="tile-user-top" href="{{avatar_link}}" target="_blank">
+                        <span class="tile-user-name">{{name_handle}}</span>
+                    </a>
+                    {{/avatar_link}}
+                    {{^avatar_link}}
+                    <span class="tile-user-top">
+                        <span class="tile-user-name">{{name_handle}}</span>
+                    </span>
+                    {{/avatar_link}}
+
+                    {{#is_twitter_or_instagram}}
+                    <a
+                        class="tile-user-bottom"
+                        href="{{avatar_link}}"
+                        target="_blank">
+                        <span class="tile-user-handle">@{{user}}</span>
+                    </a>
+                    {{/is_twitter_or_instagram}}
+                    {{#is_via_facebook}}
+                    <a href="//www.facebook.com/{{to_facebook_id}}"
+                        target="_blank"
+                        class="tile-user-bottom">
+                        <span class="tile-user-handle">{{via_text}}</span>
+                    </a>
+                    {{/is_via_facebook}}
+                </div>
+           </div>
+        </div>
+        {{/anonymous}}
+        {{/content_only}}
+
+        {{#show_title}}
+        <h2 class="tile-title">{{{title_string}}}</h2>
+        {{/show_title}}
+
+        {{#html}}
+        <div
+            class="tile-html"
+            {{#width_ratio}}data-width-ratio="{{width_ratio}}"{{/width_ratio}}
+            {{#height_ratio}}data-height-ratio="{{height_ratio}}"{{/height_ratio}}
+            >
+            {{{html}}}
+        </div>
+        {{/html}}
+
+        {{#parsed_caption}}
+        <div class="tile-caption">
+            {{#in_reply_to_message}}
+            <i class="stackla-icon-reply"></i>
+            {{/in_reply_to_message}}
+            {{{msg}}}
+        </div>
+        {{/parsed_caption}}
+
+        {{#source_is_twitter}}
+        <div class="tile-twitter-intent">
+            <a
+                href="https://twitter.com/intent/tweet?in_reply_to={{twitter_id}}"
+                class="tile-twitter-reply" target="_blank">
+                <i class="fs fs-reply"></i>
+            </a>
+            <a
+                href="https://twitter.com/intent/retweet?tweet_id={{twitter_id}}"
+                class="tile-twitter-retweet" target="_blank">
+                <i class="fs fs-retweet"></i>
+            </a>
+            <a
+                href="https://twitter.com/intent/favorite?tweet_id={{twitter_id}}"
+                class="tile-twitter-favorite" target="_blank">
+                <i class="fs fs-heart"></i>
+            </a>
+        </div>
+        {{/source_is_twitter}}
+
+        {{#ecal_data}}
+        <ul class="tile-ecal">
+            {{#location}}
+            <li>
+                <i class="stackla-icon-location"></i>
+                <strong>Location:</strong>
+                <span class="ecal-text">{{location}}</span>
+            </li>
+            {{/location}}
+            <li>
+                <i class="stackla-icon-time"></i><strong>Start:</strong> <span class="ecal-text">{{startFormat}}</span>
+            </li>
+            <li>
+                <i class="stackla-icon-time"></i><strong>End:</strong> <span class="ecal-text">{{endFormatf}}</span>
+            </li>
+            {{#details}}
+            <li>
+                <i class="stackla-icon-list"></i><strong>Details:</strong>
+                <span class="ecal-text">{{details}}</span>
+            </li>
+            {{/details}}
+            {{#clickThroughUrl}}
+            <li class="ecal-url">
+                <a href="{{ecal_data.clickThroughUrl}}" target="_blank">Add to Calendar</a>
+            </li>
+            {{/clickThroughUrl}}
+        </ul>
+        {{/ecal_data}}
+
+        {{^content_only}}
+        {{#show_tag_container}}
+        <div class="tile-tags">
+            {{#tags_extended}}
+            {{#publicly_visible}}
+            <a class="tile-tag tag-{{slug}} priority-{{priority}} type"
+                {{#custom_url}}href="{{custom_url}}"{{/custom_url}}
+                {{#custom_url}}target="{{target}}{{/custom_url}}">{{tag}}</a>
+            {{/publicly_visible}}
+            {{/tags_extended}}
+        </div>
+        {{/show_tag_container}}
+
+        {{#show_interactions}}
+        <div class="tile-interactions">
+            {{#show_likes}}
+                <span class="tile-interaction-like">
+                    <a
+                        class="tile-interaction-link {{#like_is_on}}on{{/like_is_on}}"
+                        onclick="Widget.likeDislike('{{_id.$id}}', 'like')">
+                        <i class="fs fs-thumbs-up"></i>
+                    </a>
+                    <span class="tile-interaction-count">
+                        {{numUps}}
+                    </span>
+                </span>
+            {{/show_likes}}
+            {{#show_dislikes}}
+                <span class="tile-interaction-dislike">
+                    <a
+                        class="tile-interaction-link {{#dislike_is_on}}on{{/dislike_is_on}}"
+                        onclick="Widget.likeDislike('{{_id.$id}}', 'dislike')">
+                        <i class="fs fs-thumbs-down"></i>
+                    </a>
+                    <span class="tile-interaction-count">
+                        {{numDowns}}
+                    </span>
+                </span>
+            {{/show_dislikes}}
+            {{#show_comments}}
+            <span class="tile-interaction-comment">
+                <a class="tile-interaction-link expand-click-through">
+                    <i class="fs fs-comment"></i>
+                </a>
+                <span class="tile-interaction-count">{{totalNumComments}}</span>
+            </span>
+            {{/show_comments}}
+            {{#show_votes}}
+            <span class="tile-interaction-vote">
+                <a class="tile-interaction-link{{#votes_is_on}} on{{/votes_is_on}}"
+                    data-tile-id="{{_id.$id}}"
+                    onclick="Widget.competitionVote('{{_id.$id}}')">
+                    <i class="fs fs-triangle-up"></i>
+                </a>
+                <span class="tile-interaction-count js-vote-count">
+                    {{numVotes}}
+                </span>
+            </span>
+            {{/show_votes}}
+
+
+        </div>
+        {{/show_interactions}}
+        {{/content_only}}
+
+
+        {{#show_claim}}
+        <div class="tile-claim">
+            <a
+                href="javascript:void(0);"
+                class="tile-claim-link {{^claimed}}js-claim-tile{{/claimed}}"
+                data-source="{{source}}"
+                data-source-user-iwaawad="{{source_user_id}}"
+                data-tile-id="{{_id.$id}}">
+                {{#claimed}}Tile Registered{{/claimed}}
+                {{^claimed}}Register Your Tile{{/claimed}}
+            </a>
+        </div>
+        {{/show_claim}}
+    </div>
+</div>
+</script>
+        <!-- Head Slot (end) -->
+
+        <!-- Custom CSS (start) -->
+        <style id="custom-css">.tile {
+  border: none;
+  margin-bottom: 50px;
+}
+.tile-content {
+  margin: 0;
+  max-width: 364px;
+  padding: 0;
+}
+.tile-avatar-image {
+  border-radius: 0%;
+  height: 70px;
+  width: 70px;
+}
+.tile-belt {
+  margin-top: 29px;
+  margin-bottom: 27px;
+}
+.tile-source {
+  color: #1da1f2;
+  font-size: 40px;
+  margin-right: 14px;
+}
+.tile-timestamp {
+  font-size: 12px;
+  color: #878786;
+}
+.tile-twitter-intent {
+  height: 30px;
+  background-color: white;
+  border-bottom: 1px solid #DADADA;
+  padding-bottom: 22px;
+}
+@font-face {
+  font-family: "HelveticaNeueW01-77BdCn_692722";
+  src: url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497099772/helveticaneuew01-77bdcn-692722.eot?#iefix");
+  src: url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497099772/helveticaneuew01-77bdcn-692722.eot?#iefix") format("eot"), url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497099789/helveticaneuew01-77bdcn-692722.woff") format("woff"), url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497099793/helveticaneuew01-77bdcn-692722.ttf") format("truetype"), url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497099803/helveticaneuew01-77bdcn-692722.svg#d90b3358-e1e2-4abb-ba96-356983a54c22") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeueW01-45Ligh";
+  src: url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-10/1509443302/helveticaneuew01-45ligh.eot?#iefix");
+  src: url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-10/1509443302/helveticaneuew01-45ligh.eot?#iefix") format("eot"), url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-10/1509443425/helveticaneuew01-45ligh.woff") format("woff"), url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-10/1509443418/helveticaneuew01-45ligh.ttf") format("truetype"), url("https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-10/1509443409/helveticaneuew01-45ligh.svg") format("svg");
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497103209/icomoon.eot');
+  src: url('https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497103209/icomoon.eot') format('embedded-opentype'), url('https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497103221/icomoon.ttf') format('truetype'), url('https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497103228/icomoon.woff') format('woff'), url('https://web-assets.stackla.com/10/airbus-a350/media/images/customimages/2017-06/1497103215/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.tile-user-handle,
+.tile-user-name {
+  letter-spacing: 0.25px;
+}
+.fs-heart:before,
+.fs-reply::before,
+.fs-retweet::before {
+  color: #DADADA;
+}
+.tile-image-wrapper ~ .tile-avatar-wrapper {
+  margin-top: -39%;
+}
+.tile .tile-caption {
+  font-size: 16px;
+  color: #575656;
+  line-height: 30px;
+  letter-spacing: 0.25px;
+}
+.tile .tile-caption a:link {
+  color: #002878;
+}
+.button {
+  display: inline-block;
+  left: 50%;
+  padding: 0;
+  position: relative;
+  transform: translateX(-50%);
+}
+.button.js-load-more {
+  height: 50px;
+  background-color: transparent;
+}
+.button.js-load-more > span {
+  font-family: "HelveticaNeueW01-77BdCn_692722", Bold;
+  color: #183782;
+  width: 250px;
+  margin: auto;
+  z-index: 2;
+  border: 1px solid #b3b2b2;
+  padding: 15px 67px 15px 67px;
+  position: relative;
+  font-size: 14px;
+  font-weight: normal;
+}
+.button.js-load-more > span:before {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  font-size: 12px;
+}
+.button.js-load-more.clickonce {
+  display: none!important;
+}
+.button.js-load-more:hover > span {
+  background-color: #183782;
+  color: #fff;
+}
+body {
+  font-family: "HelveticaNeueW01-45Ligh", Arial;
+}
+@media screen and (max-width: 1119px) {
+  .tile-avatar-image {
+    height: 61px !important;
+    width: 61px !important;
+  }
+  .tile-content {
+    padding: 0 19px 0 19px;
+  }
+  .tile-belt {
+    margin-top: 17px;
+    margin-bottom: 18px;
+  }
+  .tile .tile-caption {
+    font-size: 15px !important;
+    margin-bottom: 21px !important;
+    line-height: 27px;
+    letter-spacing: 0.23px;
+  }
+  .tile-image-wrapper ~ .tile-avatar-wrapper {
+    margin-top: -72px !important;
+  }
+  .tile-user-handle,
+  .tile-user-name {
+    letter-spacing: 0.23px;
+    font-size: 15px !important;
+  }
+  .tile-source {
+    color: #1da1f2;
+    font-size: 36px;
+    margin-right: 18px;
+  }
+  .button.js-load-more > span {
+    padding: 15px 57px 15px 57px !important;
+  }
+  .tile-image-wrapper ~ .tile-avatar-wrapper {
+    margin-top: -72px;
+  }
+}
+@media screen and (max-width: 818px) {
+  .tile-belt {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .tile-content {
+    padding: 0 14px 0 14px;
+  }
+}
+@media screen and (max-width: 613px) {
+  .tile {
+    margin-bottom: 40px !important;
+  }
+  .tile-content {
+    padding: 0 !important;
+  }
+  .tile-belt {
+    margin-top: 18px;
+    margin-bottom: 19px;
+  }
+}
+</style>
+        <!-- Custom CSS (end) -->
+
+        <!-- Sentry -->
+        
+        
+        <!-- Lightbox Custom JS (start) -->
+        <script type="text/html" id="lightbox-custom-js"></script>
+        <!-- Lightbox Custom JS (end) -->
+
+        <!-- Lightbox Custom CSS (start) -->
+        <script type="text/html" id="lightbox-custom-css"></script>
+        <!-- Lightbox Custom CSS (end) -->
+
+        
+            <script src="a_data/https-rules.js"></script>
+        <script type="text/html" id="tpl-video"><!-- Video Embed Code (start) -->
+{{#show_video}}
+{{#is_ie8}}
+<div class="stacklapopup-image-wrapper">
+    <a href="{{video_url}}" target="_blank">
+        <img src="{{image}}" alt="{{image_alt_text}}">
+        <div class="stacklapopup-play-icon"></div>
+    </a>
+</div>
+{{/is_ie8}}
+{{^is_ie8}}
+<div class="stacklapopup-video-wrapper">
+    <div class="stacklapopup-video-wrapper-inner">
+        <div class="stacklapopup-video {{dimensions}}">
+
+        {{#embed_url}}
+            {{#is_vimeo}}
+            <iframe width="640" height="360" src="//player.vimeo.com/video/{{embed_url}}" frameborder="0" class="stacklapopup-iframe" />
+            {{/is_vimeo}}
+
+            {{#is_vine}}
+            <iframe src="{{embed_url}}/embed/simple" width="640" height="640" frameborder="0" class="stacklapopup-iframe stackla-vine" />
+            {{/is_vine}}
+
+            {{#is_gplus}}
+            <iframe type="text/html" width="640" height="360" src="{{embed_url}}" frameborder="0" class="stacklapopup-iframe" />
+            {{/is_gplus}}
+
+            {{#is_youtube}}
+            <iframe type="text/html" width="640" height="360" src="//www.youtube.com/embed/{{embed_url}}?autoplay=1" allowfullscreen="allowFullScreen" frameborder="0" class="stacklapopup-iframe" />
+            {{/is_youtube}}
+
+            {{#is_weibo}}
+            <iframe type="text/html" width="480" height="480" src="http://video.weibo.com/show?fid={{embed_url}}" frameborder="0" class="weibo-iframe" />
+            {{/is_weibo}}
+        {{/embed_url}}
+
+        {{#is_mp4}}
+            {{#is_firefox}}
+            <video class="video-js vjs-default-skin" controls autoplay preload="auto" width="640" height="640" poster="" data-setup="">
+                <source src="{{{mp4_url}}}" type="video/mp4" />
+            </video>
+            {{/is_firefox}}
+
+            {{^is_firefox}}
+            <video src="{{{mp4_url}}}" class="video-js vjs-default-skin" controls autoplay preload="auto" width="640" height="640" poster=""></video>
+            {{/is_firefox}}
+        {{/is_mp4}}
+
+        {{#is_unknown_video}}
+            {{#image}}
+            <a href="{{original_link}}" target="_blank">
+                <img src="{{image}}" width="100%" class="unknown-video" /><div class="stacklapopup-play-icon"></div>
+            </a>
+            {{/image}}
+        {{/is_unknown_video}}
+
+
+
+        </div>
+    </div>
+</div>
+{{/is_ie8}}
+{{/show_video}}
+<!-- Video Embed Code (end) -->
+</script>        <script type="text/html" id="tpl-product-list">
+<div class="stacklapopup-products-wrap">
+    <ul class="stacklapopup-products">
+        {{#products}}
+        <li class="stacklapopup-products-item" data-tag-id="{{id}}">
+            {{#tag}}
+            <a href="{{{custom_url}}}" target="_blank" class="stacklapoup-prodcuts-item-title-wrap">
+                <h2 class="stacklapopup-products-item-title">{{tag}}</h2>
+            </a>
+            {{/tag}}
+            {{#image_small_url}}
+            <div class="stacklapopup-products-item-image">
+                 <img src="{{{image_small_url}}}" width="{{image_small_width}}" height="{{image_small_height}}">
+            </div>
+            {{/image_small_url}}
+            <div class="stacklapopup-products-item-content">
+                {{#price}}
+                <div class="stacklapopup-products-item-price">{{price}}</div>
+                {{/price}}
+                {{#description}}
+                <p class="stacklapopup-products-item-description">{{description}}</p>
+                {{/description}}
+                <a href="{{{custom_url}}}" target="{{target}}" class="stacklapoup-prodcuts-item-button-wrap">
+                    <span class="stacklapopup-products-item-button">{{cta_text}}</span>
+                </a>
+            </div>
+            <a href="javascript:void(0)" title="Close" class="stacklapopup-products-item-close-link">×</a>
+        </li>
+        {{/products}}
+    </ul>
+</div>
+</script>
+
+        <script>
+        window.Stackla = window.Stackla || {
+            debug: false,
+            widgetType: 'base_waterfall'
+        };
+        </script>
+    </head>
+    <body class="cf-testnewwebsite">
+        <div style="width: 100%;" class="track">
+    <div style="padding-top: 0px; padding-left: 0px; position: relative; overflow: hidden; height: 1379px;" class="container isotope" id="container"><div style="width: 509px; position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);" class="tile twitter image false false false false expand-click-through contains-tag-officialairbusgroupwidechannels contains-tag-officialairbusspacetwitter isotope-item" id="5b0093bc54e6902e62db0c91" original-url="//twitter.com/AirbusSpace/status/997948656757170182" identity="44324383" network="twitter" data-href="//twitter.com/AirbusSpace/status/997948656757170182">
+    <div class="tile-content">
+
+        <div style="height: 1106px;" class="tile-image-wrapper ">
+            <img style="width: 100%; height: auto; margin-left: 0%; margin-top: 0%;" src="a_data/Ddls9CeVwAAXMKC.jpg" class="twitter-img tile-image" data-image-width="313" data-image-height="680" data-image-size="small" alt="; ; We took a 🛰 picture today over #Windsor 🇬🇧 during the #RoyalWedding. You can see the crowd along the route ⬇. #WindsorCastle https://t.co/k9FsgaeVC8">
+            <div style="display: none;" class="tile-media-loading"><span class="tile-media-loading-icon"></span></div>
+
+
+        </div>
+
+        <div class="tile-avatar-wrapper">
+            <div style="display: none;" class="tile-avatar-placeholder">
+                <img src="a_data/avatar-mask.png" alt="Airbus Space">
+            </div>
+            <a class="tile-avatar-link" href="https://twitter.com/AirbusSpace" target="_blank">
+                <img class="tile-avatar-image avatar-profile-image" src="a_data/EXext0q4_normal.jpg" alt="Airbus Space">
+            </a>
+        </div>
+
+        <div class="tile-belt">
+            <div class="tile-source tile-source-twitter"><i class="fs fs-twitter"></i></div>
+            <div class="tile-timestamp">6h</div>
+            <div class="tile-user-info">
+                <div class="tile-user">
+                    <a class="tile-user-top" href="https://twitter.com/AirbusSpace" target="_blank">
+                        <span class="tile-user-name">Airbus Space</span>
+                    </a>
+
+                    <a class="tile-user-bottom" href="https://twitter.com/AirbusSpace" target="_blank">
+                        <span class="tile-user-handle">@AirbusSpace</span>
+                    </a>
+                </div>
+           </div>
+        </div>
+
+
+
+        <div style="word-wrap: break-word;" class="tile-caption">
+            We took a <img class="tile-emoji" draggable="false" alt="🛰" src="a_data/1f6f0.png"> picture today over <a href="https://twitter.com/#%21/search?q=%23Windsor" title="#Windsor" class="tweet-url hashtag" target="_blank" rel="nofollow">#Windsor</a> <img class="tile-emoji" draggable="false" alt="🇬🇧" src="a_data/1f1ec-1f1e7.png"> during the <a href="https://twitter.com/#%21/search?q=%23RoyalWedding" title="#RoyalWedding" class="tweet-url hashtag" target="_blank" rel="nofollow">#RoyalWedding</a>. You can see the crowd along the route <img class="tile-emoji" draggable="false" alt="⬇" src="a_data/2b07.png">. <a href="https://twitter.com/#%21/search?q=%23WindsorCastle" title="#WindsorCastle" class="tweet-url hashtag" target="_blank" rel="nofollow">#WindsorCastle</a> <a href="https://t.co/k9FsgaeVC8" target="_blank" rel="nofollow">https://t.co/k9FsgaeVC8</a>
+        </div>
+
+        <div class="tile-twitter-intent">
+            <a href="https://twitter.com/intent/tweet?in_reply_to=997948656757170182" class="tile-twitter-reply" target="_blank">
+                <i class="fs fs-reply"></i>
+            </a>
+            <a href="https://twitter.com/intent/retweet?tweet_id=997948656757170182" class="tile-twitter-retweet" target="_blank">
+                <i class="fs fs-retweet"></i>
+            </a>
+            <a href="https://twitter.com/intent/favorite?tweet_id=997948656757170182" class="tile-twitter-favorite" target="_blank">
+                <i class="fs fs-heart"></i>
+            </a>
+        </div>
+
+
+
+
+
+    </div>
+</div></div>
+        <a style="visibility: visible;" class="button js-load-more"><span>Load more</span></a>
+    <div style="display: none;" class="spinner-overlay"><div class="spinner"></div></div></div>
+
+
+
+        <script src="a_data/base-common.js"></script>
+
+        <!--// Include socialHubConfig //-->
+    <script type="text/javascript">
+
+var stacklaSocialHub = {
+
+    config: {userRole:0,comps:[]},
+
+    showVote: function ( title ) {
+        
+        if ( typeof title === 'undefined' ) {
+            return false;
+        }
+
+        var comps = this.config.comps;
+        for (var i in comps) {
+            // Viewable by none
+            if (typeof comps[i].viewable !== 'undefined' && comps[i].viewable === -1 || typeof comps[i].voting_tags === 'undefined') {
+                return false;
+            }
+            
+            if (comps[i].voting_tags.length === 0) {
+                if (this.config.userRole >= comps[i].viewable) {
+                        return true;
+                }
+            } else {
+                for (var j in title['tags']) {
+                    if ($.inArray(title['tags'][j], comps[i].voting_tags) + 1) {
+                        if (this.config.userRole >= comps[i].viewable) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    },
+    actionVote: function ( title ) {
+        
+        if ( typeof title === 'undefined' || !this.showVote(title)) {
+            return false;
+        }
+
+        var comps = this.config.comps;
+        for (var i in comps) {
+            // Actionable by none
+            if (typeof comps[i].actionable !== 'undefined' && comps[i].actionable === -1 || typeof comps[i].voting_tags === 'undefined') {
+                return false;
+            }
+            if (comps[i].voting_tags.length === 0) {
+                if (this.config.userRole >= comps[i].actionable) {
+                    return true;
+                }
+            } else {
+                for (var j in title['tags']) {
+                    if ($.inArray(title['tags'][j], comps[i].voting_tags) + 1) {
+                        if (this.config.userRole >= comps[i].actionable) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+};
+</script>
+
+                    <script src="a_data/trackla.js"></script>
+<script>
+(function() {
+    if (window.Stackla && window.Stackla.Trackla) {
+        new window.Stackla.Trackla({"stackId":"1278","tracklaEndPoint":"https:\/\/trackla.stackla.com"});
+    }
+}());
+</script>
+        
+        <!-- Last Slot (start) -->
+        <script src="a_data/base_waterfall_002.js"></script>
+
+<script src="a_data/base_waterfall.js"></script>
+
+<script>
+var Callbacks = function () {
+
+};
+Callbacks.prototype.onCompleteJsonToHtml = function (tileObject, t) {
+    return tileObject;
+};
+Callbacks.prototype.onCompleteRenderImage = function(img) {
+
+};
+Callbacks.prototype.onCompleteAddingToDom = function (tiles) {
+    // tiles is an jquery array object, use tiles.each when traversing
+};
+// call first, before render/window resize
+Callbacks.prototype.onBeforeRenderIsotope = function(containerWidth, maxTileWidth, margin, numColumns, currentTileWidth) {
+    //Can be used to handle break-points for responsiveness, example:
+    /*
+    if (containerWidth > 900) {
+        var columns = 6;
+        return {
+            tileWidth: Math.floor(((containerWidth - margin) / columns) - margin);
+            numColumns: columns
+        }
+    } else {
+        var columns = 3;
+        return {
+            tileWidth: Math.floor(((containerWidth - margin) / columns) - margin);
+            numColumns: columns
+        }
+    }
+    */
+
+    // return tile width, isotope will be init as tile width + margin
+    return {
+        tileWidth: currentTileWidth,
+        numColumns: numColumns
+    }
+}
+// call second, before each tile width and height is set
+Callbacks.prototype.getTileWidth = function (tile, tileWidth, margin, numColumns) {
+        // return tile width
+    return tileWidth;
+    };
+// call third, after tile width and height is set
+Callbacks.prototype.onCalculateDimensions = function (tile) {
+
+};
+// After filter being changed
+Callbacks.prototype.onCompleteChangeFilter = function (tiles, prevFilterId, nextFilterId) {
+
+};
+// Before more tiles being rendered
+Callbacks.prototype.onBeforeRenderTiles = function (addedIds, addedData) {
+
+};
+// After more tiles being rendered
+Callbacks.prototype.onCompleteRenderTiles = function ($addedTiles, addedData) {
+
+};
+// Triggers when it's the end of the scrolling
+Callbacks.prototype.onScrollLoad = function (tiles, jsLoading) {
+
+};
+// Triggers when it's the end of the scrolling
+Callbacks.prototype.onScrollEnd = function (tiles, jsLoading) {
+
+};
+// Triggers when parent page triggers a customised postMessage
+Callbacks.prototype.onMessage = function (type, data) {
+
+};
+//======================
+// Customisable Strings
+//======================
+var Strings = {
+   "load_more": "Load more content",
+   "scroll_load": "Loading...",
+   "scroll_end": "There is no more content to be displayed."
+};
+</script>
+<script>
+var fluidWidgetCustomCallbacks = new Callbacks(),
+    click_through_url = {"ct":"[EXPAND]","domain":"airbus-a350.stackla.com"},
+    alias = getUrlVars()['domain'],
+    _setting = _.assign({"parent_id":null,"name":"Waterfall for new website (1 row)","external_js":null,"config":{"lightbox":{"apply_custom_sharing_title_on_miss_title":false,"disable_short_url":false,"fallback_share_image":"","layout":"portrait","post_comments":false,"sharing_text":"","sharing_title":"","show_additional_info":true,"show_comments":false,"show_dislikes":false,"show_likes":false,"show_nav":false,"show_sharing":false,"show_shopspots":false,"show_products":false,"show_tags":false,"show_votes":false,"show_powered_by_stackla":false},"tile_options":{"show_comments":false,"show_dislikes":false,"show_likes":false,"show_sharing":false,"show_shopspots":false,"show_tags":false,"show_votes":false},"claim_config":{"show_claim_button":false,"show_claim_button_on_tags":[]}},"id":"19911","guid":"58cfef1da15c7","stack_id":"1278","filter":[],"style":{"auto_refresh":false,"click_through_url":"[EXPAND]","domain":"airbus-a350.stackla.com","enable_custom_tiles_per_page":false,"enable_doublecolumnspan":false,"load_more_type":"button","enable_typekit":false,"margin":0,"max_tile_width":0,"name":"Waterfall for new website (1 row)","parent_page_ext_username":false,"parent_page_permissions":false,"parent_page_secret_key":"","polling_frequency":30,"rows_per_page":1,"show_powered_by_stackla":false,"shopspot_btn_background":"0198CF","shopspot_btn_font_color":"ffffff","shopspot_icon":"","style":"base_waterfall","text_tile_background":"ffffff","text_tile_font_color":"666666","text_tile_font_size":15,"text_tile_user_handle_font_color":"575656","text_tile_user_handle_font_size":16,"text_tile_user_name_font_color":"575656","text_tile_user_name_font_size":16,"text_tile_link_color":"00abf0","tiles_per_page":15,"type":"fluid","widget_background":"","widget_loading_image":"\/\/assetscdn.stackla.com\/media\/images\/widget\/loading.gif"},"css":null,"custom_css":".tile {\r\n  border: none;\r\n  margin-bottom: 50px;\r\n}\r\n.tile-content {\r\n  margin: 0;\r\n  max-width: 364px;\r\n  padding: 0;\r\n}\r\n.tile-avatar-image {\r\n  border-radius: 0%;\r\n  height: 70px;\r\n  width: 70px;\r\n}\r\n.tile-belt {\r\n  margin-top: 29px;\r\n  margin-bottom: 27px;\r\n}\r\n.tile-source {\r\n  color: #1da1f2;\r\n  font-size: 40px;\r\n  margin-right: 14px;\r\n}\r\n.tile-timestamp {\r\n  font-size: 12px;\r\n  color: #878786;\r\n}\r\n.tile-twitter-intent {\r\n  height: 30px;\r\n  background-color: white;\r\n  border-bottom: 1px solid #DADADA;\r\n  padding-bottom: 22px;\r\n}\r\n@font-face {\r\n  font-family: \"HelveticaNeueW01-77BdCn_692722\";\r\n  src: url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497099772\/helveticaneuew01-77bdcn-692722.eot?#iefix\");\r\n  src: url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497099772\/helveticaneuew01-77bdcn-692722.eot?#iefix\") format(\"eot\"), url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497099789\/helveticaneuew01-77bdcn-692722.woff\") format(\"woff\"), url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497099793\/helveticaneuew01-77bdcn-692722.ttf\") format(\"truetype\"), url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497099803\/helveticaneuew01-77bdcn-692722.svg#d90b3358-e1e2-4abb-ba96-356983a54c22\") format(\"svg\");\r\n}\r\n@font-face {\r\n  font-family: \"HelveticaNeueW01-45Ligh\";\r\n  src: url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-10\/1509443302\/helveticaneuew01-45ligh.eot?#iefix\");\r\n  src: url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-10\/1509443302\/helveticaneuew01-45ligh.eot?#iefix\") format(\"eot\"), url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-10\/1509443425\/helveticaneuew01-45ligh.woff\") format(\"woff\"), url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-10\/1509443418\/helveticaneuew01-45ligh.ttf\") format(\"truetype\"), url(\"https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-10\/1509443409\/helveticaneuew01-45ligh.svg\") format(\"svg\");\r\n}\r\n@font-face {\r\n  font-family: 'icomoon';\r\n  src: url('https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497103209\/icomoon.eot');\r\n  src: url('https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497103209\/icomoon.eot') format('embedded-opentype'), url('https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497103221\/icomoon.ttf') format('truetype'), url('https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497103228\/icomoon.woff') format('woff'), url('https:\/\/web-assets.stackla.com\/10\/airbus-a350\/media\/images\/customimages\/2017-06\/1497103215\/icomoon.svg') format('svg');\r\n  font-weight: normal;\r\n  font-style: normal;\r\n}\r\n.tile-user-handle,\r\n.tile-user-name {\r\n  letter-spacing: 0.25px;\r\n}\r\n.fs-heart:before,\r\n.fs-reply::before,\r\n.fs-retweet::before {\r\n  color: #DADADA;\r\n}\r\n.tile-image-wrapper ~ .tile-avatar-wrapper {\r\n  margin-top: -39%;\r\n}\r\n.tile .tile-caption {\r\n  font-size: 16px;\r\n  color: #575656;\r\n  line-height: 30px;\r\n  letter-spacing: 0.25px;\r\n}\r\n.tile .tile-caption a:link {\r\n  color: #002878;\r\n}\r\n.button {\r\n  display: inline-block;\r\n  left: 50%;\r\n  padding: 0;\r\n  position: relative;\r\n  transform: translateX(-50%);\r\n}\r\n.button.js-load-more {\r\n  height: 50px;\r\n  background-color: transparent;\r\n}\r\n.button.js-load-more > span {\r\n  font-family: \"HelveticaNeueW01-77BdCn_692722\", Bold;\r\n  color: #183782;\r\n  width: 250px;\r\n  margin: auto;\r\n  z-index: 2;\r\n  border: 1px solid #b3b2b2;\r\n  padding: 15px 67px 15px 67px;\r\n  position: relative;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n}\r\n.button.js-load-more > span:before {\r\n  font-family: 'icomoon' !important;\r\n  speak: none;\r\n  font-style: normal;\r\n  font-weight: normal;\r\n  font-variant: normal;\r\n  text-transform: none;\r\n  line-height: 1;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  position: absolute;\r\n  right: 14px;\r\n  top: 10px;\r\n  font-size: 12px;\r\n}\r\n.button.js-load-more.clickonce {\r\n  display: none!important;\r\n}\r\n.button.js-load-more:hover > span {\r\n  background-color: #183782;\r\n  color: #fff;\r\n}\r\nbody {\r\n  font-family: \"HelveticaNeueW01-45Ligh\", Arial;\r\n}\r\n@media screen and (max-width: 1119px) {\r\n  .tile-avatar-image {\r\n    height: 61px !important;\r\n    width: 61px !important;\r\n  }\r\n  .tile-content {\r\n    padding: 0 19px 0 19px;\r\n  }\r\n  .tile-belt {\r\n    margin-top: 17px;\r\n    margin-bottom: 18px;\r\n  }\r\n  .tile .tile-caption {\r\n    font-size: 15px !important;\r\n    margin-bottom: 21px !important;\r\n    line-height: 27px;\r\n    letter-spacing: 0.23px;\r\n  }\r\n  .tile-image-wrapper ~ .tile-avatar-wrapper {\r\n    margin-top: -72px !important;\r\n  }\r\n  .tile-user-handle,\r\n  .tile-user-name {\r\n    letter-spacing: 0.23px;\r\n    font-size: 15px !important;\r\n  }\r\n  .tile-source {\r\n    color: #1da1f2;\r\n    font-size: 36px;\r\n    margin-right: 18px;\r\n  }\r\n  .button.js-load-more > span {\r\n    padding: 15px 57px 15px 57px !important;\r\n  }\r\n  .tile-image-wrapper ~ .tile-avatar-wrapper {\r\n    margin-top: -72px;\r\n  }\r\n}\r\n@media screen and (max-width: 818px) {\r\n  .tile-belt {\r\n    margin-top: 16px;\r\n    margin-bottom: 16px;\r\n  }\r\n  .tile-content {\r\n    padding: 0 14px 0 14px;\r\n  }\r\n}\r\n@media screen and (max-width: 613px) {\r\n  .tile {\r\n    margin-bottom: 40px !important;\r\n  }\r\n  .tile-content {\r\n    padding: 0 !important;\r\n  }\r\n  .tile-belt {\r\n    margin-top: 18px;\r\n    margin-bottom: 19px;\r\n  }\r\n}\r\n","custom_js":"$.extend(Callbacks.prototype, {\r\n\r\n    onBeforeRenderIsotope: function (containerWidth, maxTileWidth, margin, numColumns, currentTileWidth) {\r\n        \r\n\t\t\/\/ Bloc d'info\r\n\t\tvar $tiles = $('.tile');\r\n\t\t$tiles.$link = $('a', $tiles);\r\n\t\t\/\/ test fix disappearing items\r\n\t\t\/\/$tiles.$link.removeAttr('target');\r\n\t\t\r\n\t\t\/\/ Linkmore\r\n\t\tvar $linkmore = $('.button.js-load-more');\r\n\t\tif($linkmore.length) {\r\n\t\t\tif($tiles.length){\r\n\t\t\t\t$linkmore.html('<span>' + Strings.load_more + '<\/span>');\r\n\t\t\t}else{\r\n\t\t\t\t$linkmore.html('<span>' + Strings.no_data + '<\/span>');\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\tnumColumns = 3;\r\n        if (containerWidth > 819) {\r\n            numColumns = 3;\r\n        } else if (containerWidth > 614) {\r\n            numColumns = 2;\r\n        } else {\r\n            numColumns = 1;\r\n        }\r\n\t\t\r\n\t\tcurrentTileWidth = Math.floor(((containerWidth - margin) \/ numColumns) - margin);\r\n\t\t\r\n\t\t\/*if(numColumns == 1) {\r\n\t\t\t$linkmore.hide();\r\n\t\t} else {\r\n\t\t\t$linkmore.show();\r\n\t\t}\r\n\t\t*\/\r\n\t\t$linkmore.unbind('click.stackla').bind('click.stackla', {}, function() { $(this).addClass('clickonce'); });\r\n\t\t\r\n\t\tconsole.log('[onBeforeRenderIsotope]', this, containerWidth, maxTileWidth, margin, numColumns, currentTileWidth);\r\n\t\t\r\n\t\treturn {\r\n            tileWidth: currentTileWidth,\r\n            numColumns: numColumns\r\n        };\r\n    }\r\n});\r\n\r\n\/\/======================\r\n\/\/ Customisable Strings\r\n\/\/======================\r\nStrings.load_more = 'Load more';\r\nStrings.no_data = 'No data found';\r\nStrings.scroll_load = 'Loading...';\r\nStrings.scroll_end = 'There is no more content to be displayed.';\r\n","lightbox_custom_js":"","lightbox_custom_css":"","custom_tile":"","filter_id":"66857","slug":"airbus-a350.stackla.com","status":"production","short_name":"airbus-a350","stub":"testnewwebsite","widget_type_name":"Waterfall","widget_type_style":"base_waterfall","widget_type_gen":"2","custom_templates":[],"click_through_url":"{\"ct\":\"[EXPAND]\",\"domain\":\"airbus-a350.stackla.com\"}","search":null,"tags":null,"tile_id":null,"tags_grouped_as":null,"geohash":null,"widget_id":"19911","competition":[],"permission":{"claim":true,"shopspot":true,"analytics":false},"stack_config":{"disable_badword_content":"no","enable_text_indexes":{"enabled":1,"completed":1},"enable_trackla":1,"stackla_analytics":{"site_id":641,"enabled":true}},"templates":[],"domain":"widget.stackla.com","im_domain":"im.stackla.com","stack":{},"ttl":30}, {
+        alias: alias,
+        request_params: Stackla.Display.Util.getUrlParams(),
+        strings: Strings
+    });
+
+updateClickThroughMeta(click_through_url);
+
+$(document).ready(function () {
+    Widget.initialize({
+        _setting: _setting,
+        name: "Waterfall for new website (1 row)",
+        hostname: 'widget.stackla.com',
+        ttl: '30',
+        api: '/widget/api',
+        widgetId: '19911',
+        filterId: '66857',
+        hashId: '58cfef1da15c7',
+        draftId: '',
+        style: 'base_waterfall',
+        widgetTypeName: 'Waterfall',
+        appearance: {"auto_refresh":false,"click_through_url":"[EXPAND]","domain":"airbus-a350.stackla.com","enable_custom_tiles_per_page":false,"enable_doublecolumnspan":false,"load_more_type":"button","enable_typekit":false,"margin":0,"max_tile_width":0,"name":"Waterfall for new website (1 row)","parent_page_ext_username":false,"parent_page_permissions":false,"parent_page_secret_key":"","polling_frequency":30,"rows_per_page":1,"show_powered_by_stackla":false,"shopspot_btn_background":"0198CF","shopspot_btn_font_color":"ffffff","shopspot_icon":"","style":"base_waterfall","text_tile_background":"ffffff","text_tile_font_color":"666666","text_tile_font_size":15,"text_tile_user_handle_font_color":"575656","text_tile_user_handle_font_size":16,"text_tile_user_name_font_color":"575656","text_tile_user_name_font_size":16,"text_tile_link_color":"00abf0","tiles_per_page":15,"type":"fluid","widget_background":"","widget_loading_image":"\/\/assetscdn.stackla.com\/media\/images\/widget\/loading.gif"},
+        show_powered_by_stackla: false,
+        margin: 0,
+        enableDoubleColumnSpan: false,
+        alias:alias,
+        lightboxCustomCss: document.getElementById('lightbox-custom-css').innerHTML,
+        lightboxCustomJs: document.getElementById('lightbox-custom-js').innerHTML,
+        stackId: 1278,
+        externalJs: '',
+        itemPerPage: 0,
+        loadMoreType: 'button',
+        tileDimension: {width:0},
+        numRows: 1,
+                options: {"apply_custom_sharing_title_on_miss_title":false,"disable_short_url":false,"fallback_share_image":"","layout":"portrait","post_comments":false,"sharing_text":"","sharing_title":"","show_additional_info":true,"show_comments":false,"show_dislikes":false,"show_likes":false,"show_nav":false,"show_sharing":false,"show_shopspots":false,"show_products":false,"show_tags":false,"show_votes":false,"show_powered_by_stackla":false},
+        inlineTileOptions: {"show_comments":false,"show_dislikes":false,"show_likes":false,"show_sharing":false,"show_shopspots":false,"show_tags":false,"show_votes":false},
+        stackShortName: 'airbus-a350',
+        stackConfig: {"disable_badword_content":"no","enable_text_indexes":{"enabled":1,"completed":1},"enable_trackla":1,"stackla_analytics":{"site_id":641,"enabled":true}},
+        stackEnabledShopspots: 1,
+        stackEnabledClaim: 1,
+        stackEnabledAnalytics: 0,
+        claimConfig: {"show_claim_button":false,"show_claim_button_on_tags":[]},
+        imDomain: 'im.stackla.com',
+        enableBrightcoveVideoCloud: 0,
+        parent_page_permissions: false,
+        parent_page_ext_username: false,
+        requestParams: Stackla.Display.Util.getUrlParams(),
+        strings: Strings
+    });
+});
+</script>
+
+<!-- Custom JS (start) -->
+<script>
+$.extend(Callbacks.prototype, {
+
+    onBeforeRenderIsotope: function (containerWidth, maxTileWidth, margin, numColumns, currentTileWidth) {
+        
+		// Bloc d'info
+		var $tiles = $('.tile');
+		$tiles.$link = $('a', $tiles);
+		// test fix disappearing items
+		//$tiles.$link.removeAttr('target');
+		
+		// Linkmore
+		var $linkmore = $('.button.js-load-more');
+		if($linkmore.length) {
+			if($tiles.length){
+				$linkmore.html('<span>' + Strings.load_more + '</span>');
+			}else{
+				$linkmore.html('<span>' + Strings.no_data + '</span>');
+			}
+		}
+		
+		
+		
+		numColumns = 3;
+        if (containerWidth > 819) {
+            numColumns = 3;
+        } else if (containerWidth > 614) {
+            numColumns = 2;
+        } else {
+            numColumns = 1;
+        }
+		
+		currentTileWidth = Math.floor(((containerWidth - margin) / numColumns) - margin);
+		
+		/*if(numColumns == 1) {
+			$linkmore.hide();
+		} else {
+			$linkmore.show();
+		}
+		*/
+		$linkmore.unbind('click.stackla').bind('click.stackla', {}, function() { $(this).addClass('clickonce'); });
+		
+		console.log('[onBeforeRenderIsotope]', this, containerWidth, maxTileWidth, margin, numColumns, currentTileWidth);
+		
+		return {
+            tileWidth: currentTileWidth,
+            numColumns: numColumns
+        };
+    }
+});
+
+//======================
+// Customisable Strings
+//======================
+Strings.load_more = 'Load more';
+Strings.no_data = 'No data found';
+Strings.scroll_load = 'Loading...';
+Strings.scroll_end = 'There is no more content to be displayed.';
+</script>
+<!-- Custom JS (end) -->
+
+        <!-- Last Slot (end) -->
+
+        
+        <script src="a_data/impressions.js"></script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3b3d1112a8","applicationID":"35583761","transactionName":"ZgFSYkBVXkUEVkFbVl9LcVVGXV9YSkBbWVdeE14=","queueTime":0,"applicationTime":69,"atts":"SkZRFAhPTUs=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<div class="image-audit" style="position: absolute; top: -9999px; left: -9999px; width: 0px; height: 0px"></div></body></html>
