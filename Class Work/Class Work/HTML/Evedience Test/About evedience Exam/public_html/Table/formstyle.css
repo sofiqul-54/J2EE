@@ -1,0 +1,69 @@
+#container{
+    width: 80%;
+    height: auto;
+    min-height: 600px;
+    margin: 0 auto;
+}
+#header{
+   width: 100%;
+   height: 80px;
+   background: #ccc;
+   
+}
+
+#mainbody{
+    width: 100%;
+    height:  auto;
+    background: #065;
+}
+
+#left{
+    width: 30%;
+    height: auto;
+    background: #FBD273;
+    max-height: 500px;
+    float: left;
+}
+
+#right{
+    width: 70%;
+    height: auto;
+    background: #C9E9F7;
+    float: left;
+}
+.form-cointainer{
+    width: 100%;
+    height: auto;
+}
+
+.labels{
+    width: 25%;
+    height: auto;
+    float: left;
+}
+
+.ffields{
+    width: 75%;
+    height: auto;
+    float: left;
+}
+input, text area, select, label{
+    margin: 2px;
+
+}
+
+fieldset{
+    margin: 20px;
+}
+
+marquee{
+    color: green;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#footer{
+   width: 80%;
+   height: auto;
+   background: #ccc; 
+}

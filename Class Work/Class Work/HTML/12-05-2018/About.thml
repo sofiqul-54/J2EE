@@ -1,0 +1,13 @@
+<html> 
+	<head>
+		<title> About </title>
+	</head>
+		<body>
+		<h1> About </h1> 
+		<a href="Index.html"> Home </a>
+		<a href="About.html"> About </a>	
+		<a href="Contract.html"> Contract </a>
+		<a href="Service.html"> Service </a>
+		<a href="Term.html"> Term </a>
+		</body>
+</html>
