@@ -1,0 +1,143 @@
+.container{
+    width: 80%;
+    height: auto;
+    min-height: 600px;
+    margin: 0;
+    background-color: red;
+}
+/**********************Title Heder Start*************/
+.row1{
+    width: 100%;
+    height: 70px;
+    background: #63CDFF;
+}
+
+.logo{
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.title{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.signout{
+    width: 25%;
+    height: 100%;
+    float: left;
+
+}
+/**********************Carousel Start*************/
+
+.row2{
+    width: 100%;
+    height: 70px;
+    background: #F1CFA0;
+}
+/**********************Menu Start*************/
+.menu{
+    width: 100%;
+    height: 35px;
+    background: #FF988F;
+    text-align: center;
+    type: bold;
+}
+
+#menu a{
+    text-decoration: none;  
+    padding: 0px 25px; 
+    line-height: 2;
+    color: #fff;
+    font-weight: 900;
+}
+#menu a:hover{
+    text-decoration: none;  
+    padding: 0px 25px; 
+    line-height: 2;
+    color: #c09;
+    font-weight: 900;
+}
+/**********************Main Content Start*************/
+.maincontent{
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    background: green;
+}
+
+.cleft{
+    width: 25%;
+    height: 850px;
+    float: left;
+
+}
+
+.cmiddle{
+    width: 50%;
+    height: 850px;
+    float: left;
+}
+.lbody{
+    width: 20%;
+    height: 850px;
+    float: left;
+}
+.rbody{
+    width: 80%;
+    height: 850px;
+    float: left;
+}
+.cright{
+    width: 25%;
+    height: 850px;
+    float: left;
+}
+/**********************Order List Start*************/
+
+.row5{
+    width: 100%;
+    height: 70px;
+    background: blue;
+}
+
+.orderlist{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.unorderlist{
+    width: 50%;
+    height: 100%;
+    background-color: greenyellow;
+    float: left;
+}
+/**********************Upper footer Start*************/
+.row6{
+    width: 100%;
+    height: 70px;
+    background: yellow;
+}
+.col-lg-3{
+    height: 100%;
+}
+/**********************Upper footer Start*************/
+.row7{
+    width: 100%;
+    height: 40px;
+    background: #9d9d9d;
+}
+
+.col-lg-5{
+    height: 100%;
+}
+
+.col-lg-7{
+    height: 100%;
+}
+
+
+
+
