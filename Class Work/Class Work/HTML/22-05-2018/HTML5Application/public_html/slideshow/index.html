@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="HTML Slideshow" name="description">
+    <meta content="html slideshow, hypertext markup language slideshow" name="keywords">
+
+    <title>HTML Slideshow</title>
+
+  </head>
+  <body>
+
+        <h2>HTML and Javascript Slideshow</h2>
+
+This is an extremely easy-to-use and highly customizable HTML and Javascript Slideshow developed using jQuery. Instead of adopting a component-based design, the slideshow is developed in a template manner where each template only includes the necessary CSS and Javascript codes. This allows the slideshow to be included in an existing web pages with very little additional bandwidth. Customizations and extensions can also be easily incorporated into the slideshow by changing the necessary codes. This design allows everyone to understand and confidently make use of the templates without messing around with a large amount of Javascript and CSS codes. 
+<br /><br />
+We have many years of development on the web and we have found this methodology the most productive as compared to using a bloated component. There will be times when you need to make additional extensions to the component or you may realize that your component has some bugs in certain browsers. It is difficult to fix the bugs when the component contains a large amount of codes. <br /><br />
+
+Each of the slideshow templates is developed using the same basic principles as described in a section below. The basic principles will be very useful to you if you are going to create your own slideshow components from scratch.
+<br /><br />
+Our philosophy is simple : <b><i>"Use what you understand. Understand what you use."</i></b>
+<br /><br />
+	  <table>
+	  <tr>
+	  <td>	
+		<b>Slideshow templates</b><br /><br />
+		<ul>
+		<li><a href="direct/index.html" style="color:black">Simple Slideshow</a> <br /> The basic slideshow without transition effects. This slideshow provides the basic framework for all of our other slideshows. This slideshow is explained in details below. </li>
+		<li><a href="fade/index.html" style="color:black">Fade In/Fade Out</a> <br /> A slideshow using Fade In/Fade Out transition effects.</li>
+		<li><a href="slide/index.html" style="color:black">Slide Left/Slide Right</a> <br /> A slideshow using the Slide Left/Slide Right transition effects.</li>
+		<li><a href="autoPlayFade/index.html" style="color:black">AutoPlay Fade</a> <br /> This slideshow will automatically fade to the next slide after the specified seconds. Once any of the navigation buttons are clicked, the "autoplay" feature will be turned off.</li>
+		<li><a href="autoPlaySlide/index.html" style="color:black">AutoPlay Slide</a> <br /> This slideshow will automatically shift/slide to the next slide after the specified seconds. Once any of the navigation buttons are clicked, the "autopllay" feature will be turned off.</li>
+		</ul>
+	   </td>
+	   </tr>
+	 </table>
+<h3>Using the HTML Slideshow</h3>
+The following is a complete tutorial on using the HTML and Javascript slideshow. We strongly recommend that you read this section. It allows you to understand the inner workings of the slideshow and make the job of customization very easy. All other and future slideshow templates will be designed based on this framework described. The diagram below provides an overview of the slideshow. The "right" button allows you to navigate to the next slide. The "left" button allows you to navigate to the previous slide. Overall, the slideshow consists of HTML, Javascript, CSS and images working together hand in hand.
+<br /><br />
+<center>
+<img src="pageimages/slideshow.png" />
+</center>
+<br />
+The following shows the HTML portion of the slideshow. It uses a CSS class with ID "container" for declaring a section for the slideshow. All images and buttons for navigation are defined within this "container" section. The &lt;ul&gt; element (Unordered List) is used to list all the images of the slideshow. Note that the width and height of the images are specified for each of the list elements.  
+	  <table>
+	  <tr>
+	  <td class="left"></td>
+	  <td class="middle">
+	  <pre class="default">
+
+	&lt;div id="container"&gt;
+	&lt;ul&gt;
+	&lt;li&gt;&lt;img src="picture1.jpg" width="604" height="453" /&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src="picture2.jpg" width="604" height="453" /&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src="picture3.jpg" width="604" height="453" /&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;span class="button prevButton"&gt;&lt;/span&gt;
+	&lt;span class="button nextButton"&gt;&lt;/span&gt;
+	&lt;/div&gt;	
+	  </pre>
+	  </td>
+	  <td class="right"></td>
+	  </tr>
+	  </table> 
+The following shows the CSS definitions of the "container" class and the related &lt;ul&gt; unordered list. Note that the width and height need to be the same as the dimensions specified in the HTML codes. The line "list-style:none outside none;" overrides the default behaviour of showing a dot before each unordered list item.
+
+	  <table>
+	  <tr>
+	  <td class="left"></td>
+	  <td class="middle">
+	  <pre class="default">
+
+	#container{
+		width:604px;
+		height:453px;
+		position:relative;
+	}
+
+	#container ul{
+		width:604px;
+		height:453px;
+		list-style:none outside none;
+		position:relative;
+		overflow:hidden;
+	}
+	  </pre>
+	  </td>
+	  <td class="right"></td>
+	  </tr>
+	  </table>	
+The following CSS codes define the first child and the normal child of the unordered list. This is the part that overlays the different images on top of each other to form the slideshow. Notice the "first-child" has "display" set to "list-item" whereas other list items have "display" set to "none". This is designed so that the first image will be displayed on the HTML page. On top of that, since the "position" of the items is set to "absolute", all the images are overlaid on top of each other.
+
+	  <table>
+	  <tr>
+	  <td class="left"></td>
+	  <td class="middle">
+	  <pre class="default">
+
+	#container li:first-child{
+		display:list-item;
+		position:absolute;
+	}
+
+	#container li{
+		position:absolute;
+		display:none;
+	}
+	  </pre>
+	  </td>
+	  <td class="right"></td>
+	  </tr>
+	  </table>	
+The &lt;span&gt; element in the HTML defines the two navigation buttons for moving onto the next or previous slide. The navigation buttons uses the "prevButton" and "nextButton" CSS class. <br /><br />
+The definition of the "prevButton" CSS class is as shown below. The "nextButton" classes is similar and hence we will not show the example. There is another CSS class, the "button" class used in the HTML codes. This class is only used in the Javasccript codes for identifying that a navigating button has been clicked. 
+	  <table>
+	  <tr>
+	  <td class="left"></td>
+	  <td class="middle">
+	  <pre class="default">
+
+	#container .prevButton{
+		height:72px;
+		width:68px;
+		position:absolute;
+		background:url('buttons.png') no-repeat;
+		top:50%;
+		margin-top:-36px;
+		cursor:pointer;
+		z-index:2000;
+		background-position:left top;
+		left:0
+	}
+
+	#container .prevButton:hover{ 
+			background-position:left bottom;left:0;}
+	  </pre>
+	  </td>
+	  <td class="right"></td>
+	  </tr>
+	  </table>	
+
+The CSS code example above uses an image call "buttons.png". This image is as shown below. The upper "left" and "right" buttons are the images displayed by the HTML page when the mouse did not hover on top of the navigating buttons in the slideshow. The lower "left" and "right" buttons are the images shown when the mouse hovers on top of the navigating buttons. <br /><br />
+
+The dimension of the entire "buttons.png" image is "136x144". The "width" and "height" of the "prevButton" class is derived by dividing the width 136 by 2 and the height 144 by 2. The line "background-position:left top;" indicates that the "previous" button in the slideshow uses "68x72" from the "top left" corner of the "buttons.png" file.   
+<br /><br />
+When the mouse pointer hovers on top of the "previous" button, the line ".prevButton:hover" comes into action. This line instructs the browser to now use the cutout (68x72) image from the "left bottom" corner of the "buttons.png" file. This allows the highlighting effect to be achieved.
+<br /><br />
+<center>
+<img src="images/buttons.png" style="border:black solid 1px;" />
+</center>
+<br /><br />
+The following Javascript code example shows the final piece of the slideshow. The code is developed using jQuery. If you have not heard of jQuery, we strongly suggest that you take a look at it. It is one of the best frameworks available for developing cross browsers solution in Javascript. 
+<br /><br />
+The Javascript code example below defines a "click" action for the CSS class "#container .button". If you recall from the HTML codes, the "previous" and "next" button defined in the &lt;span&gt; elements uses the "#container .button" class. Once any of these buttons are clicked, the Javascript/jQuery code calculates the next page to display. The line "currentPage.hide();" hides the current slide while the "nextPage.show();" displays the next slide.
+	  <table>
+	  <tr>
+	  <td class="left"></td>
+	  <td class="middle">
+	  <pre class="default">
+
+&lt;script&gt;
+$(window).load(function(){
+		var pages = $('#container li'), current=0;
+		var currentPage,nextPage;
+
+		$('#container .button').click(function(){
+			currentPage= pages.eq(current);
+			if($(this).hasClass('prevButton'))
+			{
+
+				if (current <= 0)
+					current=pages.length-1;
+				else
+					current=current-1;
+			}
+			else
+			{
+				if (current >= pages.length-1)
+					current=0;
+				else
+					current=current+1;
+			}
+			nextPage = pages.eq(current);	
+			currentPage.hide();	
+			nextPage.show();		
+		});
+});
+&lt;/script&gt;
+	  </pre>
+	  </td>
+	  <td class="right"></td>
+	  </tr>
+	  </table>	
+We have come to the end of this tutorial. You will be interested to know that all our slideshow templates are built with the principles described above. We have other slideshows with transition effects such as fade in/fade out and slide left/slide right, and also slideshows that automatically transit the slides. 
+<br />
+<br />
+<b>License :</b> <a href="gpl-3.0.txt" style="color:black;">GPLv3</a>
+<br /><br />
+
+<b>Browser Requirements</b>
+<ul>
+<li>Internet Explorer 6, 7, 8, 9+</li>
+<li>Safari 4+</li>
+<li>Mozilla Firefox 3+</li>
+<li>Google Chrome 4+</li>
+<li>Opera 10+</li>
+</ul>
+
+  </body>
+</html>

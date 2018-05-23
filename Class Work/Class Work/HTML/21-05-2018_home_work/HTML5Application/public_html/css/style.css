@@ -80,12 +80,20 @@
     float: left;
 }
 .lbody{
+<<<<<<< HEAD
     width: 5%;
+=======
+    width: 20%;
+>>>>>>> feac1ce40052da5ff7d29722546667731046fdad
     height: 850px;
     float: left;
 }
 .rbody{
+<<<<<<< HEAD
     width: 45%;
+=======
+    width: 80%;
+>>>>>>> feac1ce40052da5ff7d29722546667731046fdad
     height: 850px;
     float: left;
 }
