@@ -1,0 +1,39 @@
+.container{
+    width: 80%;
+    height: auto;
+    background: blue;
+}
+.header{
+    width: 98%;
+    height: auto;
+    background: #46b8da;
+    margin: 10px;
+
+}
+.body{
+    width: 98%;
+    height: auto;
+    background: #31b0d5;
+    margin: 10px;
+}
+
+.lbody{
+    width: 30%;
+    height: 118px;
+    float: left;
+    background: #8c8c8c;
+}
+
+.rbody{
+    width: 70%;
+    height: auto;
+    background: #255625;
+    float: left;
+}
+.footer{
+   width: 98%;
+    height: auto;
+    background: #31b0d5;
+    margin: 10px;
+}
+
