@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div style="width: 500px; margin: 0 auto; background: #E3F2E1">
+            <form action="display.html" style="padding: 7px">
+                <label>ID</label>
+                <input type="number" name="ID" required><br><br>
+                <label>Full Name</label>
+                <input type="text" name="Full Name" required><br><br>
+                <label>Gender</label>
+               Male : <input type="radio" name="Gender" value="Male">
+               Female : <input type="radio" name="Gender" value="Female"><br><br>
+            </form>
+        </div>
+    </body>
+</html>
+
+  <div style="width:500px; margin: 0 auto; background: #ffff99">
+            <form action="display.html" style="padding: 7px;">
+            <label>ID</label>                
+            <input type="number" name="ID" required/><br/>
+            <label>Full Nameame</label>    
+            <input type="text" name="Fullname" required/><br/>
+            <label>Gender</label>
+            Male:<input type="radio" name="Gender" value="Male"/>
+            Female:<input type="radio" name="Gender" value="Female"/><br/>
+            <label>Hobby</label>
+            Reading: <input type="checkbox" name="Hobby" value="Reading"/>
+            Writing:<input type="checkbox" name="Hobby" value="Writing"/>
+            Playing:<input type="checkbox" name="Hobby" value="Playing"/><br/>
+            <label>Round</label>
+            <select name="Round">
+                <option>Select Round</option>
+                <option value="Round-36">Round-36</option>
+                <option value="Round-37">Round-37</option>
+                <option value="Round-38">Round-38</option>
+            </select>
+            <br/><br/><br/>
+            <input type="reset"  value="Reset" />
+            <input type="submit"  value="Send" onSubmit="sendFormData()"/>
+        </form>
+        </div>
