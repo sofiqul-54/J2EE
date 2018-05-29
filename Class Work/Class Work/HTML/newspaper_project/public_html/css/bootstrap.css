@@ -6777,5 +6777,9 @@ a:link {
     background-color: #102C57;
     padding: 0px;
 }
+.marquee{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
