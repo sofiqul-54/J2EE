@@ -5,8 +5,7 @@
 <title>function as literals</title>
 </head>
 
-<body bgcolor="#ff6c04">
-<script>
+<body bgcolor="#ff6c04"><script>
 
    /*function as literals*/
      
@@ -20,8 +19,23 @@
 	   
 	   var colorIt="#" +(converter(255)+converter(108)+converter(4));
 	   document.write(colorIt);
-   
-   
+	   
+	   //444444444
+	   function simpleFunctionWithArgumentAndReturn(msg){
+		   return msg;
+		   }
+		   document.write(simpleFunctionWithArgumentAndReturn("hello world"));
+		   
+		   //444444//////////
+		   
+		   function sum(x, y){
+			   z=x+y;
+			   return z;
+		   }
+			   var result=sum(0,5)+20;
+			   document.write(result)
+			   
+		   
 </script>
 </body>
 </html>
