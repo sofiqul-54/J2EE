@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body bgcolor="#CadDad">
+<script>
+var onlyGlobal="This variable is only global!";
+var localGlobal="I\'m global now!";
+function showMe(){
+	var localGlobal="I\' now local";
+	var onlyGlobal="Only works on the local level";
+	alert(localGlobal+"--"+onlyLocal);
+	}
+	
+	showMe();
+	document.write(onlyGlobal+"<p>"+localGlobal);
+	alert(onlyGlobal);
+</script>
+</body>
+</html>
