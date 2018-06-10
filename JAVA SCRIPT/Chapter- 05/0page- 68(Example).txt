@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+var counter = 0; //Sequence
+var endIt = 14;
+while (counter<=endIt){
+	if(counter==5){ //Conditional beigns
+		alert("You are half way through");
+		}//conditional ends
+	}	
+	
+	
+	document.write("Before Increment:"+counter);
+	counter++;
+	//Loop end
+	document.write("After Increment:"+counter);
+</script>
+</body>
+</html>
