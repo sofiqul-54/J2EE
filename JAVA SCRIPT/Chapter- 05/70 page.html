@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body bgcolor="#FFCCFF">
+
+<script>
+
+		
+	function dogCrate(x,y,z){
+		var size=x*y*z;
+		var message="Your pup will have"+" "+size+" ";
+		message+="square inches in the crate.";
+		document.write(message);
+		}
+		dogCrate(12,14,15);
+		
+	document.write("<br/><br/><hr/>");
+	
+	var bidA=3304;
+	var bidB=2003;
+	var bestBid=Math.min(bidA,bidB);
+	var message="The best bid is $"+bestBid;
+	document.write(message)
+	
+	document.write("<br/><br/><hr/>");
+	
+	var bidA=330;
+	var bidB=203;
+	var bestBid=Math.max(bidA,bidB);
+	var message="The best bid is $"+bestBid;
+	document.write(message)
+	
+	document.write("<br/><br/><hr/>");
+	
+	var bidA=330;
+	var bidB=203;
+	//var message="The condition is not met."
+	if(bidA>bidB){
+		message="The condition is met."
+		}else{
+			message="The condition is not met."
+			}
+	document.write(message)
+
+	
+	
+</script>
+</body>
+</html>
