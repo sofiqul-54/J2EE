@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body bgcolor="#FF9999">
+<script>
+document.write("<hr/><br/>");
+var sum =0;
+var statNum = 1;
+var endNum = 10;
+
+while (statNum<=endNum){
+	sum+=statNum;
+	statNum++;
+	}
+	document.write("While Loop:"," "+sum);
+	
+	document.write("<br/><br/><hr/>");
+	document.write("<br/>");
+	
+	var sum1=100;
+	var st = 1;
+	var en = 10;
+	do{
+		sum1+=st;
+		st++;
+		}while (st<=en)
+		document.write("Do-While:"," "+sum1)
+		
+		document.write("<br/><br/><hr/>");
+		document.write("<br/>");
+		
+		var sum2 = 1000;
+		var stn = 1;
+		var end = 100;
+		for (stn; stn<=end; stn++){
+			sum2+= stn;
+			} 
+			document.write("For Loop:", " "+sum2);
+			
+			document.write("<br/><br/><hr/>");
+		document.write("<br/>");
+		
+		var numbers=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+		var sum3 = 10;
+		for(var i in numbers){
+			sum3+=numbers[i];
+			}
+			document.write("For in Loop: "," " +sum3)
+			
+			document.write("<br/><br/><hr/>");
+		document.write("<br/>");
+		
+		var numbers=['a', 'b', 'c', ];
+		var sum3 = 10;
+		for(var i in numbers){
+			sum3+=numbers[i];
+			}
+			document.write("For in Loop: "," " +sum3)
+		
+</script>
+</body>
+</html>
