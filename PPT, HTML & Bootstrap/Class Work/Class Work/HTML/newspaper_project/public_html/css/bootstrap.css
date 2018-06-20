@@ -6776,6 +6776,8 @@ a:link {
     height: 27px;
     background-color: #102C57;
     padding: 0px;
+    margin-top: -15px;
+    text-align: left;
 }
 
 .table{
@@ -6797,5 +6799,21 @@ td, table{
 
 tr{
    border: 1px solid #EEF0EF; 
+}
+.top-border{
+    border-top: dotted;
+}
+
+hr{
+   
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+h4{
+padding: 3px;    
+}
+marquee{
+    padding: 3px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
