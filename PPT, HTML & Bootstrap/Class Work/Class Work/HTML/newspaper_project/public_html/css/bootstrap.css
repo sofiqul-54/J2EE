@@ -6787,7 +6787,7 @@ a:link {
     font-family: arial, sans-serif;
     border-collapse: collapse;
 }
-    
+
 .td{
     border: 1px solid green; 
     text-align: center;
@@ -6798,22 +6798,64 @@ td, table{
 }
 
 tr{
-   border: 1px solid #EEF0EF; 
+    border: 1px solid #EEF0EF; 
 }
 .top-border{
     border-top: dotted;
 }
 
 hr{
-   
+
     margin-bottom: 15px;
     margin-top: 5px;
 }
 
 h4{
-padding: 3px;    
+    padding: 3px;    
 }
 marquee{
     padding: 3px;
+}
+
+.poll{
+    border: 3px solid #ccc;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;  
+}
+#p{
+    padding: 18px;
+}
+
+#pollvote{
+    background: #102C57;
+    margin-left: 20px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+#pollresult{
+    background-color: #FF6000;
+    margin-left: 100px;
+    color: white;
+}
+.currencey{
+    border: 1px solid #5C9CCC;
+    display: inline-block;
+}
+.con3col{
+    background-color: #5C9CCC;
+    width: 95%;
+    padding-left: 20px;
+    margin: 6px;
+    margin-top: 1px;
+}
+
+footer{
+    display: inline-block;
+    margin-top: 15px;
+    background: #e5e5e5;
+    padding-top: 10px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
