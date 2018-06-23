@@ -1,0 +1,23 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Shed Planner</title>
+		</head>
+
+			<body bgcolor="palegoldenrod">
+				<h2> Page- 88 Shed Planner</h2>
+				<script>
+					function shedWalls(front,side){
+						var front=prompt("How many feet across the front?","");
+						var side=prompt("How many feet along the side>","");
+						var numFront=(front*12*2)/8;
+						var numSide=(side*12*2)/8;
+						var total=numFront+numSide;
+						var message="You will need"+" "+ total +"one by eight-inch boards for your shed walls"
+						document.write(message);
+						}
+						shedWalls();//the function is called
+				</script>
+			</body>
+	</html>

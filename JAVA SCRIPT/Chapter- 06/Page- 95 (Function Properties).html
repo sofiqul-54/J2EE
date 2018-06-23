@@ -1,0 +1,20 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Function Properties</title>
+		</head>
+
+			<body bgcolor="moccasin">
+				<h2><p> Page- 95 Function Properties</p></h2>
+				<script>
+					function bogus(xx){
+						//The 'xx' is the agrument
+						var alpha=arguments.length;
+						var beta=bogus.length;
+						return alpha+"agruments, but should use"+beta+"argument/s."
+						//When the bogus.length run it returns 1 because it only has 1 agruments
+						}
+						document.write("This function uses"+bogus(3,4,5));
+				</script>
+	</html>
