@@ -1,0 +1,57 @@
+<!doctype html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<title>form</title>
+            	<style>
+            		input{
+						margin:5px;
+						}
+					select{
+						margin:5px;
+						}
+                </style>
+		</head>
+
+		<body>
+        	<div style="width:341px; margin:auto; background:#CF9">        
+       			<legend><h4 style="text-align:center">Registration Form</h4></legend>
+                <form action="display.html"style="padding:7px;">
+                	 <label>ID :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <input type="number" name="ID" required placeholder="Enter your ID number"><br>
+                    <label>Name :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <input type="text" name="name" placeholder="Enter Your Full Name"><br>  
+                    <label>Gender :</label>&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Male">Female<br>
+                    <label>Hobby :</label>&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <input type="checkbox" name="hobby" value="Reading">Reading
+                    <input type="checkbox" name="hobby" value="Reading">Writing
+                    <input type="checkbox" name="hobby" value="Reading">Playing<br>
+                    <label>Round :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <select name="Round">
+                    	<option>Select One</option>
+                        <option value="Round-34">Round-34</option>
+                        <option value="Round-35">Round-35</option>
+                        <option value="Round-36">Round-36</option>
+                        <option value="Round-37">Round-37</option>
+                        <option value="Round-38">Round-38</option>
+                        <option value="Round-39">Round-39</option>
+                    </select><br><br><br>
+                    <center><input type="reset" value="Reset">
+                    <input type="submit" value="Send" onSubmit="sendFormData()"></center>
+            	</form>
+                <script>
+                	function sendFormData(){
+						var value1 = "value1";
+						var value2 = "value2";
+						var value3 = "value3";
+						var value4 = "value4";
+						var value5 = "value5";
+						var queryString = "?para1= " + value1 + "&para2= " + value2 + "&para3= " + value3 + "&para4= " + value4 + "&para5= " + value5;
+						document.location.href="display.html" + queryString;
+						}
+                </script>
+            </div>
+		</body>
+	</html>
