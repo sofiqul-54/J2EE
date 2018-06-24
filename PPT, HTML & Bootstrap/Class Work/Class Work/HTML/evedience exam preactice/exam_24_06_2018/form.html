@@ -1,0 +1,64 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="utf-8">
+		<title>Untitled Document</title>
+		<style>
+		input{
+						margin:5px;
+						}
+					select{
+						margin:5px;
+						}
+		</style>
+
+		</head>
+
+		<body>
+			<div style="width:341px; margin:auto; background:#9F9; padding:7px;">
+			<form action="display.html">
+				<label>Name :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+				<input type="text" name="name" placeholder="Enter your name"/><br>
+				<label>Gender :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+				<select name="gender">
+					<option>Select Gender</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</select><br>
+				<label>Round :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+				<select name="round">
+					<option>Select a Round</option>
+					<option value="Round- 32">Round- 32</option>
+					<option value="Round- 33">Round- 33</option>
+					<option value="Round- 34">Round- 34</option>
+					<option value="Round- 35">Round- 35</option>
+					<option value="Round- 36">Round- 36</option>
+					<option value="Round- 37">Round- 37</option>
+					<option value="Round- 38">Round- 38</option>
+					<option value="Round- 39">Round- 39</option>
+				</select><br>
+				<label>Complete Subject :</label>
+				<input type="checkbox" name="completesub" value="HTML"/>HTML
+				<input type="checkbox" name="completesub" value="PPT"/>PPT
+				<input type="checkbox" name="completesub" value="JS"/>JS
+				<br><br><br>
+				
+				<center>
+				<input type="submit" value="send" onSubmit="sendFormData()"/>
+				<input type="reset" value="Clear Form"/>
+				</center>
+			</form>
+			</div>
+			
+			<script>
+				function sendFormData(){
+					var value1 ="value1";
+					var value2 ="value2";
+					var value3 ="value3";
+					var value4 ="value4";
+					var queryString = "?para1=" + value1 +"&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4;
+					document.location.href="display.html" +  queryString;
+					}
+			</script>
+		</body>
+	</html>

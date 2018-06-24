@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+	h2{
+		font-size:18pt;
+		color: #e8b002;
+		font-family: Verdana;
+		}
+	.clickNote{
+		font-size:12pt;
+		font-weight:bold;
+		color:#fb503e;
+		background-color:black;
+		font-family:Verdana, Geneva, sans-serif;
+		}
+</style>
+</head>
+
+<body bgcolor="#839063" onLoad="javascript:window.document.peptstore.reset()">
+<script>
+	function doIT(){
+		window.document.petstore.puppy.value="Swissy";
+		window.document.petstore.clicker.value="I\'ve been clicked";
+		}
+</script>
+<center>
+<h2>Object Hierarchy Practice</h2>
+<span class="clickNote">&nbsp; Click the button: &nbsp;</span><br><br>
+<form name="petstore">
+<input type="text" name="puppy"/>
+<input type="button" name="clicker" value="Click to change value of text window" onClick="doIT()"/>
+</form>
+</center>
+</body>
+</html>

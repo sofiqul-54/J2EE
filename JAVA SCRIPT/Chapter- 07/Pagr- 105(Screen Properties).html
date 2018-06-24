@@ -1,0 +1,25 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Screen Properties</title>
+		</head>
+
+		<body>
+			<script>
+				function showScreen(){
+					var display="My Screen properties";
+					var screenSee= new Array(5);
+					screenSee[0]="Available screen height="+screen.availHeight;
+					screenSee[1]="Available screen width="+screen.availWidtht;
+					screenSee[2]="you have"+(screen.colorDepth)+"bit color.";
+					screenSee[3]="Your screen is"+screen.height+"pixel high";
+					screenSee[4]="and"+screen.width+"pixel wide.";
+					for(var counter=0;counter<screenSee.length;counter++){
+						display+=screenSee[counter]+"<br>";
+						}
+						document.write(display);				
+					}
+			</script>
+		</body>
+	</html>
