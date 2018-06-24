@@ -1,0 +1,34 @@
+@charset "utf-8";
+.container{
+	width:80%;
+	height:400px;
+
+	}
+	.header{
+		width:100%;
+		height:100px;
+		background-color:#900;
+	}
+	.body{
+		width:100%;
+		height:280px;
+	}
+	.lbody{
+		width:25%;
+		height:280px;
+		background-color:#FFF;
+		float:left;
+	}
+	.rbody{
+		width:75%;
+		height:280px;
+		float:left;
+		background-color:#FF0;
+	}
+	.footer{
+		width:100%;
+		height:20px;
+		background-color:#0F0;
+		}
+	/* CSS Document */
+
