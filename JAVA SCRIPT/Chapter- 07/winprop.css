@@ -1,0 +1,23 @@
+@charset "utf-8";
+h3{
+	color:#c6d699;
+	background-color:#8d6ba8;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16pt;
+	}
+.bod{
+	color:#731224;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11pt;
+	font-weight:bold;
+	}
+a:link{
+	color:#731224;
+	background-color:#c6d699;
+	}
+h2{
+	color:#8d6ba8;
+	background-color:#c6d699;
+	font-size:14pt;
+	}
+

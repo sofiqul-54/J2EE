@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>timing</title>
+<script>
+var cupUp=new Image();
+cupUp.src="images/cupajava.jpg";
+var cupDown=new Image();
+cupDown.src="images/hidejava.jpg";
+var alpha;
+var beta;
+	function interval(){
+	alpha=window.setInterval("document.cup.src=cupDown.src", 2000);
+	}
+	function timeOut(){
+		window.setTimeout("document.cup.src=cupUp.src", 3000);
+		window.clearInterval(alpha);
+		}
+	function clearTimeout(){
+		window.clearInterval(beta)
+		}
+
+</script>
+</head>
+
+<body>
+<table collpadding="0" cellspacing="0" border="0" width="100%" height="100" align="center">
+<tr valign="middle">
+<td align="center"><img name="cup" src="images/cupajava.jpg" width="148" alt="cupajava" height="180"><p>
+<a href="#" onClick="interval()">Interval</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onClick="timeOut()">Time Out</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onClick="cleartimeOut()">Clear Time Out</a></p>
+</td>
+</tr>
+</table>
+</body>
+</html>

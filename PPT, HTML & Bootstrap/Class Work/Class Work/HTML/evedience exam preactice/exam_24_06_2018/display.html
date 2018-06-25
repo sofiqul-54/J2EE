@@ -8,7 +8,12 @@
 <body>
 	<div style="width:341px; margin:auto; background:#9F9; padding:7px;">
 		<script>
-			
+			var queryString = decodeURIComponent(window.location.seaech);
+			queryString = queryString.substring(1);
+			var queries = queryString.split("&");
+			for (var i = 0; i < queries.length; i++){
+				document.write(queries[i]+"<br>");
+				}
 		</script>
 	</div>
 </body>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Window Control</title>
+<script>
+function GetStanWin(){
+	open("sampWin.html","sampWin1","toolbar=no, width=200, height=150")
+	}
+	function moveRel(){
+		moveBy(20,20)
+		}
+	function moveAbs(){
+		moveTo(20,20)
+	}
+	function shrink(){
+		resizeBy(15,10)
+		}
+	function shrivel(){
+		resizeTo(400,300)
+		}
+</script>
+</head>
+
+<body>
+<center>
+<h2>Window Control</h2>
+<form>
+<input type="button" name="openBut" value="Click to open New Window" onClick="GetStanWin()"/><p>
+<input type="button" name="mvbyBut" value="Click move relative." onClick="moveRel()"/><p>
+<input type="button" name="mvtoBut" value="Click to move absolute." onClick="moveAbs()"/><p>
+<input type="button" name="shrinkBut" value="Click to change relative size." onClick="shrink"/><p>
+<input type="button" name="shriveBut" value="Click to change absolute size" onClick="shrivel()"/>
+</form>
+</center>
+</body>
+</html>

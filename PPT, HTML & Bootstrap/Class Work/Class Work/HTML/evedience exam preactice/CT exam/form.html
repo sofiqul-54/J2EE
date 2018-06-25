@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+input{
+	margin:5px;
+	}
+select{
+	margin:5px
+	}
+</style>
+</head>
+
+<body>
+<div style="width:341px; background-color:#9F9; margin-top:5px;">
+<form action="display.html" style="padding:10px; margin-top:10px;">
+<label>Name :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="text" name="name" placeholder="Enter your name"/><br>
+<label>ID :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="number" name="ID" required/><br>
+<label>Gender :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="radio" value="Male"/> Male
+<input type="radio" value="Female"/>Female<br>
+<label>Complete Subject :</label>
+<input type="checkbox" value="PPT" name="ComSub"/>PPT
+<input type="checkbox" value="HTML" name="ComSub"/>HTML
+<input type="checkbox" value="JS" name="ComSub"/>JS
+<label>Round :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<select name="Round">
+<option>Select Round</option>
+<option value="Round-32">Round-32</option>
+<option value="Round-33">Round-33</option>
+<option value="Round-34">Round-34</option>
+<option value="Round-35">Round-35</option>
+<option value="Round-36">Round-36</option>
+<option value="Round-37">Round-37</option>
+<option value="Round-38">Round-38</option>
+<option value="Round-39">Round-39</option>
+</select>
+<br><br><br>
+<center>
+<input type="submit" name="send" value="Send" onSubmit="sendFormData()"/>
+<input type="reset" value="Clear Form"/>
+</center>
+</form>
+</div>
+<script>
+function sendFormData(){
+	var value1 = "value1";
+	var value2 = "value2";
+	var value3 = "value3";
+	var value4 = "value4";
+	var value5 = "value5";
+	var queryString = "?para1="+value1+"&para2="+value2+"&para3="+vaule3+"&para4="+value4+"&para5="+value5;
+	window.location.href="display.html"+queryString;
+	}
+</script>
+</body>
+</html>
