@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div style="width:341px; background:#9FC; padding:7px;">
+<form action="display.html">
+<label>ID :</label> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="number" name="ID" placeholder="Enter your ID" required/><br>
+<label>Name :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="text" name="name" placeholder="Enter your name"/><br>
+<label>Gender :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="radio" name="Gender" value="Male"/> Male
+<input type="radio" name="Gender" value="Female"/> Female<br>
+<label>Round :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<select>
+<option>Select a Round</option>
+<option value="Round- 32">Round- 32</option>
+<option value="Round- 33">Round- 33</option>
+<option value="Round- 34">Round- 34</option>
+<option value="Round- 35">Round- 35</option>
+<option value="Round- 36">Round- 36</option>
+<option value="Round- 37">Round- 37</option>
+<option value="Round- 38">Round- 38</option>
+<option value="Round- 39">Round- 39</option>
+</select><br>
+<label>Com. Sub :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="checkbox" name="Com. Sub" value="PPT"/> PPT
+<input type="checkbox" name="Com. Sub" value="HTML"/> HTML
+<input type="checkbox" name="Com. Sub" value="JS"/> JS
+<br><br><br>
+<center>
+<input type="submit" value="Send" onSubmit="sendFormData()"/>
+<input type="reset" value="Reset"/>
+</center>
+</form>
+</div>
+<script>
+function sendFormData(){
+	var value1 ="value1";
+	var value2 ="value2";
+	var value3 ="value3";
+	var value4 ="value4";
+	var value5 ="value5";
+	var queryString = "?para1=" + value1 + "&para2="+value2+"&para3="+value3+"&para4="+value4+"&para5="+value5;
+	window.location.href="display.html" + queryString;
+	}
+</script>
+
+
+</body>
+</html>
