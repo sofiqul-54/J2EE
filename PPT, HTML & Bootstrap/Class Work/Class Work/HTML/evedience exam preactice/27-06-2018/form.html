@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<div style="width:400px; height:auto; background-color:#9FF; padding:7px;">
+<form action="display.html".html">
+<label>User Name :</label>&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="text" name="username" required style="border:2px solid orange;  border-radius:5px;"/><p>
+<label>Full Name :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="text" name="full name" required style="border:2px solid orange;  border-radius:5px;"/><p>
+<label>Password :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="password" name="password" required style="border:2px solid orange;  border-radius:5px;"/><p>
+<label>Re-type password :</label>
+<input type="password" name="password" required style="border:2px solid orange;  border-radius:5px;"/><p>
+<label>Gender :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input type="radio" name="gender" value="Male"/> Male
+<input type="radio" name="gender" value="Female"/> Female<p>
+<label>Language :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<select>
+<option>Select one</option>
+<option>English</option>
+<option>Bangla</option>
+<option>Arabic</option>
+</select><p>
+<label style="vertical-align:top">Comment :</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<textarea style="border:2px solid orange;  border-radius:5px;"></textarea></p></p>
+
+<center>
+<input type="reset" value="Reset" name="Reset"/>&ensp;&ensp;
+<input type="submit" value="Submit" name="Submit" onSubmit="sendFormData()"/>
+</center>
+</form>
+</div>
+
+<script>
+function sendFormData(){
+	var value1 ="value1"
+	var value2 ="value2"
+	var value3 ="value3"
+	var value4 ="value4"
+	var value5 ="value5"
+	var value6 ="value6"
+	var value7 ="value7"
+	var queryString = "?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5 + "&para6=" + value6 + "&para7=" + value7;
+	window.location.href="display.html" + queryString;
+	}
+</script>
+
+</body>
+</html>
