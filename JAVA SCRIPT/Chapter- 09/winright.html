@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function fixWin(){
+	var winR=open("","ralph","scrollbars=0, width=500, height=400, resizable=no")
+	var s=winR.document;
+	var message=document.forms[0].george.value;
+	s.write('<body bgcolor="hotpink">');
+	s.write('<h4>');
+	s.write(message);
+	s.write('</h4>');
+	s.write('</body>>');
+	s.close();
+	}
+</script>
+</head>
+
+<body>
+<form>
+<h3>Open and Write to a new window</h3>
+<input type="button" value="Write to new window" onClick="fixWin()"/>
+</form>
+</body>
+</html>

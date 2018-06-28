@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div style="width:500px; padding:10px; background-color:#FFC; margin:0 auto">
+<form action="display.html">
+<table>
+	<tr>
+		<td><label>User Name</label></td>
+		<td>:</td>
+		<td><input type="text" name="userName" style="border:2px solid orange; border-radius:5px"/></td>
+	</tr>
+	<tr>
+		<td><label>Full Name</label></td>
+		<td>:</td>
+		<td><input type="text" name="fullName" style="border:2px solid orange; border-radius:5px"/></td>
+	</tr>
+	<tr>
+		<td><label>Password</label></td>
+		<td>:</td>
+		<td><input type="password" name="password" style="border:2px solid orange; border-radius:5px"/></td>
+	</tr>
+	<tr>
+		<td><label>Re-type password</label></td>
+		<td>:</td>
+		<td><input type="password" name="Re-typePassword" style="border:2px solid orange; border-radius:5px"/></td></td>
+</tr>
+<tr>
+<td><label>Gender</label></td>
+<td>:</td>
+<td><input type="radio" name="Gender" value="Male"/> Male
+<input type="radio" name="Gender" value="Female"/> Female
+</td>
+</tr>
+<tr>
+<td><label>Language</label></td>
+<td>:</td>
+<td>
+<select name="language">
+<option>English</option>
+<option>Bengali</option>
+<option>Arabic</option>
+<option>Japanese</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label>Hobby</label></td>
+<td>:</td>
+<td><input type="checkbox" name="hobby" value="Reading" /> Reading
+<input type="checkbox" name="hobby" value="Writing"/> Writing
+<input type="checkbox" name="hobby" value="Playing"/> Playing</td>
+</tr>
+<tr>
+<td><label>Comment</label></td>
+<td>:</td>
+<td><textarea name="comment" style="border:2px solid orange; border-radius:5px"></textarea></td>
+</tr>
+<tr>
+<td> <input type="reset" value="Reset" style="border:2px solid orange; border-radius:5px"/></td>
+<td></td>
+<td><input type="submit" value="Submit" onClick="sendFormData()" style="border:2px solid orange; border-radius:5px"/></td>
+
+</tr>
+</table>
+</form>
+</div>
+<script>
+function sendFormData(){
+	var value1 ="value1";
+	var value2 ="value2";
+	var value3 ="value3";
+	var value4 ="value4";
+	var value5 ="value5";
+	var value6 ="value6";
+	var value7 ="value7";
+	var value8 ="value8";
+	var queryString = "?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5 + "&para6=" + value6 + "&para7=" + value7 + "&para8=" + value8;
+	window.location.href="display.html" + queryString;
+	}
+</script>
+</body>
+</html>
