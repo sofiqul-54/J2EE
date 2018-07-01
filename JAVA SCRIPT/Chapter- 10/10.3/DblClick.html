@@ -1,0 +1,27 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Frward</title>
+			<script>
+	function doubleUp(){
+	window.location="backPage.html";
+	}
+	function forwardTo(){
+		var alpha=history.forward();
+		}
+			</script>
+		</head>
+
+		<body bgcolor="lightgreen">
+		<p>
+		<h3>Remember this Page!</h3>
+		First double-click the top button. That will take you to another site.<br>
+		<form>
+		Double-click this button first:
+		<input type="button" value="Two click here" onDblClick="doubleUp()"/><p>
+		When you return, click this button.<input type="button" value="Go Forward" onClick="forwardTo()"/>
+		
+		</form>
+		</body>
+	</html>

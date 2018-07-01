@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OnFocus</title>
+<style type="text/css">
+body{
+	background-color:peru; 
+	font-family:Verdana, Geneva, sans-serif;
+	color:white;
+	}
+</style>
+<script>
+var auto =new Object();
+var bigOne =new Object();
+function showChange(){
+	auto=document.forms[0].ralph;
+	auto.value="More Change."
+	}
+	function areaWrit(){
+		bigOne=document.forms[0].alice;
+		bigOne.value="You have plenty of rooms to write here."
+		}
+</script>
+</head>
+<h3>Write something in either text window,<br>
+and then click the orther window</h3>
+<body>
+<form>
+<input type="text" name="ralph" onChange="showChange();"/><p>
+<textarea cols="30" rows="5" name="alice" onBlur="areaWrit();"></textarea>
+</form>
+</body>
+</html>
