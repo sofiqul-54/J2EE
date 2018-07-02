@@ -1,0 +1,22 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>textArea</title>
+			<script>
+			function setUp(){
+				var TA=new Object();
+				TA=document.memo.today;
+				TA.value="JavaScript can be used with a veriety of applications and designs. This message shall not be altered by the viewer on pain of nose snuffle. Just try it! \n Signed, \n The boss"
+				}
+			</script>
+		</head>
+	
+		<body bgcolor="#FFCC99">
+			<h3>Daily Memo</h3>
+			<form name="memo">
+				<textarea cols="40" rows="8" name="today" readonly=0></textarea>
+				<input type="button" value="See Message" onClick="setUp()"/>
+			</form>
+		</body>
+	</html>

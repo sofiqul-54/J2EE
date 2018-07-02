@@ -1,0 +1,22 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Untitled Document</title>
+			<script>
+				function getBird(){
+					var state=document.stateBird.state.value;
+					var bird=document.stateBird.bird.value;
+					alert("The state bird of" +" " + state +" "+ "is the" + " " + bird);
+					}
+			</script>
+		</head>
+		
+		<body bgcolor="#BedFed">
+			<form name="stateBird">
+				State Name :&ensp;&ensp;&ensp;&ensp;&ensp;		<input type="text" name="state"/><br><p>
+				Name of state Bird :<input type="text" name="bird"/> <p>
+									<input type="button" value="Bird Button" onClick="getBird()"/>
+			</form>
+		</body>
+	</html>

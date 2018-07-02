@@ -1,0 +1,23 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Untitled Document</title>
+			<script>
+			function putBird(){
+				var state="New Mexico";
+				document.stateBird.state.value=state;
+				var bird = "Roadrunner";
+				document.stateBird.bird.value=bird;
+				}
+			</script>
+		</head>
+
+		<body bgcolor="#bedfed">
+			<form name="stateBird">
+				<input type="text" name="state"/>: State Name<br><br>
+				<input type="text" name="bird"/>: Name of state Bird<p>
+				<input type="button" value="Bird Button" onClick="putBird()"/>
+			</form>
+		</body>
+	</html>
