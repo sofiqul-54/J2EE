@@ -1,2 +1,17 @@
 https://www.geeksforgeeks.org/
 
+
+https://www.tutorialspoint.com/javascript/javascript_events.htm
+
+https://www.xul.fr/javascript/
+
+http://help.dottoro.com/ljcnkwgs.php
+
+http://www.javascriptkit.com/jsref/location.shtml
+
+http://www.exforsys.com/tutorials/javascript/javascript-location-object-properties.html
+
+http://ccd.uab.es/recursos/documents.php?idioma=0
+
+http://ccd.uab.es/recursos/manualhtml/Scripting_Reference/loco.htm
+

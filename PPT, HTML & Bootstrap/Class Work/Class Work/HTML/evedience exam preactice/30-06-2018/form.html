@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="display.html" style="padding:7px; margin:0 auto; background-color:#6FF; width:400px">
+<table>
+<tr>
+<td><label>User Name</label></td>
+<td>:</td>
+<td><input type="text" name="userName"/></td>
+</tr>
+<tr>
+<td><label>Full Name</label></td>
+<td>:</td>
+<td><input type="text" name="fullName"/></td>
+</tr>
+<tr>
+<td><label>Password</label></td>
+<td>:</td>
+<td><input type="password" name="Password" required/></td>
+</tr>
+<tr>
+<td><label>Re-type password</label></td>
+<td>:</td>
+<td><input type="password" name="re-typePassword"/></td>
+</tr>
+<tr>
+<td><label>Gender</label></td>
+<td>:</td>
+<td><input type="radio" name="gender" value="Male"/>Male
+<input type="radio" name="gender" value="Female"/>Female</td>
+</tr>
+<tr>
+<td><label>Language</label></td>
+<td>:</td>
+<td>
+<select name="language">
+<option>English</option>
+<option>Bangla</option>
+<option>Arabic</option>
+<option>Japanese</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label>Comment</label></td>
+<td>:</td>
+<td><textarea name="comments"></textarea></td>
+</tr>
+<tr>
+<td><input type="reset" value="Reset"/></td>
+<td></td>
+<td><input type="submit" value="Submit" onSubmit="sendFormData()"/></td>
+</tr>
+</table>
+</form>
+<script>
+function sendFormData(){
+	var value1 ="value1"
+	var value2 ="value2"
+	var value3 ="value3"
+	var value4 ="value4"
+	var value5 ="value5"
+	var value6 ="value6"
+	var value7 ="value7"
+	var queryString = "?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5 + "&para6=" + value6 + "&para7=" + value7;
+	window.location.href="display.html" +queryString;
+	}
+</script>
+</body>
+</html>
