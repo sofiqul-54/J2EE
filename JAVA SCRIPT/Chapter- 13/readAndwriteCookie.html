@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Read and Write Cookie</title>
+<style type="text/css">
+body{
+	background-color:rgb(200,198,159)
+	}
+#display{
+	color:#FFF;
+	background-color:orangered;
+	font-weight:bold;
+	font-size:18px;
+	}
+</style>
+<script>
+function yourCookie(name){
+	var remain=new Date("November 9, 2005");
+	document.cookie=escape(name+document.baker.myCookie.value+";expires="+
+	remain.toGMTString()+";");
+	}
+
+function welcomeBack(){
+	var seeMe=unescape(document.cookie);
+	var tagIt=seeMe.indexOf(";");
+	seeMe=seeMe.substring(11,tagIt);
+	alert("Hello there,"+seeMe)
+	}
+</script>
+</head>
+
+<body onLoad="document.baker.reset()">
+	<div style="margin:0 auto; width:600px; padding:7px;" id="display">&nbsp;
+		<form name="baker">
+			&nbsp;<input type="text" name="myCookie"/>&nbsp;
+			Type in the value for your cookie and click the button to set the cookie<br>
+			&nbsp;<input type="button" value="Bake Cookie" onClick="yourCookie('goodCookie=');"/><p>&nbsp;
+			Click the button to read the value of the cookie along with a greeting. <br>
+			&nbsp;<input type="button" value="See Cookie" onClick="welcomeBack()"/><br>
+			&nbsp;
+		</form>
+		&nbsp;
+	</div>
+</body>
+</html>
