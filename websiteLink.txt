@@ -15,3 +15,7 @@ http://ccd.uab.es/recursos/documents.php?idioma=0
 
 http://ccd.uab.es/recursos/manualhtml/Scripting_Reference/loco.htm
 
+https://www.javatpoint.com/javascript-interview-questions
+
+http://www.quirksmode.org/js/events_mouse.html
+
