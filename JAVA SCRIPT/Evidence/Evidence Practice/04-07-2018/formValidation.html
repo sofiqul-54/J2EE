@@ -1,0 +1,35 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>formValidation</title>
+			<script>
+			function validationForm(){
+				 var x=document.forms["myform"]["fname"].value;
+				 var y=document.forms["myform"]["age"].value;
+				 var z=document.forms["myform"]["userName"].value;
+			if(x==""){
+				alert("Name must be input");
+				return false;
+				}
+			if(y<18 || y>65){
+				alert("Age must be input 18-65");
+				return false;
+				}
+			if(z==charAt(8)){
+				alert("Username mustbe input small letter or digit");
+				return false;
+				}
+			}
+			</script>
+		</head>
+		
+		<body>
+			<form name="myform" onSubmit="return validationForm()">
+				Name : <input type="text" name="fname"/><p>
+				Age : <input type="number" name="age"/><p>
+				Username: <input type="text" name="userName"/>
+				<p><input type="submit" value="Submit"/>
+			</form>
+		</body>
+	</html>
