@@ -1,0 +1,22 @@
+select all columns(1-5): select * from departments;
+
+select specific column(1-6): select department_id, location_id from departments;
+
+using arithmetic operators(1-10): select last_name, salary, salary + 300 from employees;
+
+operator precedence1(1-11): select last_name, salary, 12*salary+200 from employees;
+operator precedence1(1-11): select last_name, salary, 12*(salary+200) from employees;
+
+defining a null value(1-12): select last_name, job_id, salary, commission_pct from employees;
+
+null values in arithmetic expression(1-13): select last_name, 12*salary*commission_pct from employees;
+
+using column aliases1(1-15): select last_name As name, commission_pct As comm from employees;
+using column aliases2(1-15): select last_name "Name", commission_pct "comm" from employees;
+
+concatebation operator(1-16): select last_name||job_id as "Employees" from employees;
+
+using literal charcter strings(1-18): select last_name||'is a'||job_id as "Employees" from employees;
+
+
+

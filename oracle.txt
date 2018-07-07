@@ -1,0 +1,11 @@
+Destination Folder: C:\oraclexe\
+Oracle Home: C:\oraclexe\app\oracle\product\11.2.0\server\
+Oracle Base:C:\oraclexe\
+Port for 'Oracle Database Listener': 1521
+Port for 'Oracle Services for Microsoft Transaction Server': 2030
+Port for 'Oracle HTTP Listener': 8080
+
+
+http://localhost:8080/apex/f?p=4950:1:793936882106904
+
+http://127.0.0.1:8080/apex/f?p=4550:1:7362690660948207
