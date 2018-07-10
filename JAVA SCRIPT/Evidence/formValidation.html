@@ -1,0 +1,80 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Untitled Document</title>
+		</head>
+		
+		<body>
+			<form name="myfrom" action="#" method="post" onSubmit="return validateForm()" style="width:500px; background-color:#E3F7FB; margin:0 auto; padding:7px;">
+				<table>
+					<tr>
+						<td><span>Name</span></td>
+						<td>:</td>
+						<td><input type="text" name="fname"/></td>
+						<td><label id="fnamex"></label></td>
+					</tr>
+					<tr>
+						<td><span>ID</span></td>
+						<td>:</td>
+						<td><input type="number" name="rid"/></td>
+						<td><label id="id"></label></td>
+					</tr>
+					<tr>
+						<td><span>Gender</span></td>
+						<td>:</td>
+						<td>
+						<input type="radio" name="gender" value="male"/>Male
+						<input type="radio" name="gender" value="female"/>Female
+						</td>
+						<td><label id="gender"></label></td>
+					</tr>
+					<tr>
+						<td><span>Education</span></td>
+						<td>:</td>
+						<td>
+						<input type="checkbox" name="ssc" value="ssc"/>SSC
+						<input type="checkbox" name="hsc" value="hsc"/>HSC
+						</td>
+						<td><label id="education"></label></td>
+					</tr>
+					
+					<tr>
+						<td><span>Round</span></td>
+						<td>:</td>
+						<td>
+						<select name="round">
+						<option>Select a Round</option>
+						<option value="Round-34">Round-34</option>
+						<option value="Round-35">Round-35</option>
+						<option value="Round-36">Round-36</option>
+						<option value="Round-37">Round-37</option>
+						<option value="Round-38">Round-38</option>
+						<option value="Round-39">Round-39</option>
+						</select>
+						</td>
+						<td><label id="round"></label></td>
+					</tr>
+					<tr>
+						<td><span>Comment</span></td>
+						<td>:</td>
+						<td><textarea rows="5" cols="20" name="message"></textarea></td>
+						<td><label id="msg"></label></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="reset" value="Reset"/></td>
+						<td><input type="submit" value="Submit"/></td>
+						<td></td>
+					</tr>
+
+				</table>
+			</form>
+			
+			<script>
+				function validateForm(){
+					
+					}
+			</script>
+		</body>
+	</html>
