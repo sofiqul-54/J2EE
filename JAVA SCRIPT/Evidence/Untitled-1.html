@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+label{
+	color:#800000;
+	padding:5px;
+	}
+</style>
+
+</head>
+
+<body>
+	<form name="myForm" action="formValidation.html"  onSubmit="return validateForm()" method="post">
+            <table>
+			<tr>
+				<td>Name</td>
+				<td>:</td>
+				<td><input type="text" name="fname"><br/>
+				<label id="fnamex"></label>
+				</td>
+			</tr>
+				<td>ID</td>
+				<td>:</td>
+				<td><input type="number" name="id"/><br/>
+				<label id="rid"></label></td>
+			<tr>
+			
+			</tr>
+			<tr>
+			<td><input type="reset" value="Reset"></td>
+			<td></td>
+			<td><input type="submit" value="Submit"></td>
+			</tr>
+			</table>
+</form>
+<script>
+            function validateForm() {
+                //////////////////////// for Name //////////////
+                  var fname = document.forms["myForm"]["fname"].value;
+				  var id = document.forms["myForm"]["id"].value;
+				  ////////////////////////Validation for Name //////////////
+				  if(name==" "){
+					  document.getElementById('fnamex').innerHTML="Name must be filled out"
+					  return false;
+					  }else
+						   if(fname.length<=3){
+					  document.getElementById('fnamex').innerHTML="Name length at least 3 chracters"
+					  return false;
+					  }else
+						   if(id==""){
+					  document.getElementById('rid').innerHTML="Id must be filled out"
+					  return false;
+					  }else
+						  if(id.length<=6){
+					  document.getElementById('rid').innerHTML="Id length at least 6 number"
+					  return false;
+					  }else
+					  
+					  if(id.length<=6){
+					  document.getElementById('rid').innerHTML="Id length at least 6 number"
+					  return false;
+					  }else{
+						  document.write("Name: " + fname + "<br/>");
+						  document.write("Name: " + id + "<br/>");
+						  }
+				}
+</script>
+</body>
+</html>
