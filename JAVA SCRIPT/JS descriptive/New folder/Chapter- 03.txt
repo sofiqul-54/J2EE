@@ -1,0 +1,296 @@
+JavaScript Chapter-03
+
+Q-1. JAVASCRIPT IS A WEAKLY TYPE OR UNTYPE LANGUAGE. EXPLAIN.
+Ans. JavaScript is more shophisticated than we might expect of a weakly type language. In addition to strings, number and boolean values, JavaScript data can
+	include objects, including arrays and functions. Each of these data types is important to understand before proceeding so that when we are working om our
+	design, we can decide which data types are required to create a certain effect.
+Q-2: WHAT ARE JAVASCRIPT DATA TYPES? EXPLAIN EACH.
+Ans. JavaScript data types are strings, numbers, Boolean values, objects, arrays and functions.
+	String literals are text, like any programming languages. Any set of characters placed in a quotation marks (single or double) make up a string literal.
+	The fundamental data in most computer languages are numbers.
+	The Boolean values in JavaScript are two literals, true and false (1 or 0, yes or no).
+	Objects are collection of properties arranged in a hierarchy.
+	An array is a collection of homogenous data elements which are stored in consecutive memory locations.
+	Function is a definition of a set of deferred actions. Functions carry out actions and return values.
+Q-3: WHAT IS OBJECT IN JAVASCRIPT?
+ANS. Objects are collection of properties arranged in a hierarchy. JavaScript supports working with objects. The highest level of objects in the context of
+	JavaScript and an HTML page is the window. Everything in an HTML page is the property of the window object. The built-in objects in JavaScript are Date,
+	Math, String, Array, and Object. For example:
+	var shopCart = new Object();
+	var shopCart.item = 5.95;
+	var shopCart.tax = .06;
+	var shopCart.shipping = 14.95;
+	var shopCart = {item: 5.95, tax: .06, shipping: 14.95}; 
+Q-4: WHAT IS ARRAY IN JAVASCRIPT?
+ANS. An array is a collection of homogenous data elements which are stored in consecutive memory locations. Always address location of array starts from 0. In 
+	JavaScript arrays are treated as objects. Each property in an array is called an Element and each element can be assigned a value. An array can be declared 
+	in JavaScript in the following ways…
+	Var myArray=new Array( );
+	Var myArray=new Array(“Value 1”, “Value 2”, “Value 3”, “Value 4”, “Value 5”);
+	Var myArray=new Array(dimension argument);
+Q-5: WHAT IS LITERALS IN JAVASCRIPT?
+ANS. The raw data that make up the root of data types are called “literals”. Numbers, strings and Boolean values make up the core set of literals in JavaScript.
+Q-6: WHAT IS NUMBERS IN JAVASCRIPT? EXPLAIN.
+ANS. The fundamental data in most computer languages are numbers. Because JavaScript is weakly typed, all numbers are treated as floating-point, so we need not 
+	distinguish between integers and floating-point literals.
+Q-7: WHAT IS DIFFERENCE BETWEEN INTEGER AND FLOATING POINT NUMBER?
+ANS. Integer has no decimal value but floating-point literal has decimal value. For example:
+	223.48 is floating-point literal and
+	20 is integer.
+Q-8: WHAT IS SCIENTIFIC NOTATIONS IN JAVASCRIPT?
+ANS. In most JavaScript applications, numbers with scientific notations do not appear, but if they do, they are treated for purpose of calculations just like any
+	other number.
+Q-9: WHAT IS HEXADECIMAL LITERALS IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. Hexadecimal literals are interpreted as binary string, where each pair of digits represents a character. When used in a numeric context, they are interpreted 
+	as integers. Base 16 or Hexadecimal Literals have a special preface that the combination of numbers and letters. All Hexadecimal Literals are prefaced by 0x 
+	(zero-x), followed by 0-9, A-F characters indicating a Hexadecimal value. For example color red in Hexadecimal is FF0000; in JavaScript, it is written as 
+	0xFF0000.
+Q-10: HEXADECIMAL VALUES IS SIXCHARACTER COLOR VALUES IN JAVASCRIPT, TRUE OR FALSE?
+ANS. TRUE.
+Q-11: WHAT IS ESCAPE SEQUENCE FOR STRINGS IN JAVASCRIPT? GIVE SOME EXAMPLES.
+ANS. Escape sequences includes by prefacing a code with a backslash(\) for additional control over string literals. For example the literal \’ prints an 
+	apostrophe without affecting the literal itself. Other escape codes include the following-
+	\n new line
+	\’ single quote or apostrophe
+	\” double quote 
+	\\Backslash
+	Escape sequences works well with the alert( ) function, it does not work the same with write( ) function. The character substitutions for apostrophes and 
+	quotes return the same result but the \n sequence does not rather we’ve to use the <br> to achieve a new line.
+Q-12: WHAT IS WRITE() IN JAVASCRIPT?
+ANS. document.write() places text into the HTML page itself rather than a special box. We can use HTML tages such as <br/> to achieve a new line with.
+	document.write().
+Q-13: WHAT IS BOOLEAN VALUES IN JAVASCRIPT?
+ANS. The Boolean values in JavaScript are two literals, true and false (1 or 0, yes or no). The Boolean literals are derived from logical comparisons, testing a 
+	truth value and then using that value (true or false) for another operation. For example:
+	<script>
+	var qpt=((45%2)==0)? "hello" : "bye";
+	document.write(qpt);
+	</script>
+Q-2: WHO DEVELOPED BOOLEAN MATHMATICS?
+ANS. A Cork University Professor named George Boole daveloped a mathematical system of logic that became known as Boolean Mathematics.
+Q-14: BOOLEAN VALUES HAVE TWO LITERALS IN JAVASCRIPT. WHAT ARE THOSE? EXPLAIN.
+ANS. The Boolean values in JavaScript are two literals, true and false (1 or 0, yes or no). The Boolean literals are derived from logical comparisons, testing a 
+	truth value and then using that value (true or false) for another operation.
+Q-15: WHERE DOES BOOLEAN LITERALS DERIVE FROM?
+ANS. The Boolean literals are derived from logical comparisons, testing a truth value and then using that value (true or false) for another operation.
+Q-16: MOST BOOLEAN VALUES AND TEST ARE FOUND IN CONDITIONAL STATEMENTS? EXPLAIN.
+ANS. Most common Boolean tests  and values are found in conditional statements that have this form;
+	If a condition is true
+			Flag = true
+	Else
+			Flag = flase,
+	Using the flag value, different paths are followed, usually in the form of a statement.
+Q-17: WHAT IS CONCATENATION IN JAVASCRIPT?
+ANS. String concatenation refers to binding one or more strings into a single string. For example: 
+	<script>
+	var a = “Hello”;
+	var b = “There!”;
+	var c = a + “ ” + b;
+	document.write(c);
+	</script>
+	The output will be: Hello There!
+Q-18: WHAT ARE BEHAVIORS OF +(PLUS) SIGN IN JAVASCRIPT?
+ANS. The plus sign (+) is used both for adding numbers and concatenating strings.
+Q-19: EXPLAIN OBJECTS AS LITERALS.
+ANS. Objects are collection of properties arranged in a hierarchy. JavaScript supports working with objects. The highest level of objects in the context of
+	JavaScript and an HTML page is the window. Everything in an HTML page is the property of the window object. The built-in objects in JavaScript are Date,
+	Math, String, Array, and Object. For example:
+	var shopCart = new Object();
+	var shopCart.item = 5.95;
+	var shopCart.tax = .06;
+	var shopCart.shipping = 14.95;
+	var shopCart = {item: 5.95, tax: .06, shipping: 14.95};
+Q-20:EXPLAIN FUNCTIONS AS LITERALS.
+ANS. Function is a definition of a set of deferred actions. Functions are invoked by event handlers or by statements elsewhere in the script. Functions carry out 
+	actions and return values.  A function is a named set of JavaScript statements interpreted all at once by calling the function name. JavaScript has several 
+	built-in functions, but programmer can extend the list by writing his own. 
+	 Code: 
+	function average(a, b, c) 
+	{ 
+	   return (a + b + c)/3; 
+	}
+Q-21: WHAT IS UNDEFINE IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. An undefined value is returned when we attempt to use a variable that has not been defined or one that is declared but that we forgot to provide with a 
+	value. A nonexistent property of an object also returns undefined if it is addressed.
+Q-22: WHAT IS NULL IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. Null amounts to a “nothing literal”. We can declare and define a variable as null if we want absolutely nothing in it but we don’t want it to be undefined. 
+	Null is not the same as zero in JavaScript.
+Q-23: WHAT IS REGULAR EXPRESSION IN JAVASCRIPT? HOW DOES IT WORK? GIVE AN EXAMPLE.
+ANS. Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. Regular expressions 
+	are used to perform pattern-matching and "search-and-replace" functions on text. For example:
+	<script>
+	function x()
+	{
+	var s= "Good 100%";
+	var pattern = /\D/g;
+	var output= s.match(pattern);
+	document.write(output);
+	}
+	x();
+	</script>
+	The output will be: G,o,o,d,%
+Q-24: WHAT IS VARIABLE IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. JavaScript variables are containers for storing data values. You can place data into these containers and then refer to the data simply by naming the 
+	container. For example;
+	var x = 5;
+	var y = 6;
+	var z = x + y;
+	In here x stores the value 5, y stores the value 6 and z stores the value 11.
+Q-25: EXPLAIN VARIABLE DECLARING AND NAMING IN JAVASCRIPT.
+ANS. JavaScript has two basic ways of declaring a variable. Variables are declaring using the var word. Declaring a variable alerts the computer to the fact that
+	a new variable is available to use. After a variable is declared, it need not to be declared again. For example:
+	var item;
+	var price = 33.44;
+	var wholeThing = 86.45 + (20 * 7);
+	var name = "Willie B. Goode";
+	var address = "123 Elm Street";
+	var subTotal = sumItems;
+	var mixString = 11.86 + "Toy Cats";
+	var test = (alpha > beta);
+Q-26: WHAT ARE RULES OR CONVENTIONS OF VARIABLE NAMING?
+ANS. The rules are given below:
+	1. We can declare a variable but not give it a value.
+	2. We can set primitive data.
+	3. We can set compound data.
+	4. We can set simple string literal.
+	5. We can set simple string literal, but we can use mix of digits and letters.
+	6. Variable can be defined with another variable.
+	7. We can set Boolean value derived from compound data.
+Q-27:WHAT IS VARIABLE SCOPE IN JAVASCRIPT? 
+ANS. Variables in JavaScript have scope. The scope refers to the region of the script where the variables can be used.
+Q-28:WHAT IS LOCAL VARIABLE IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. These variables only exist inside the specific function that creates them. They are unknown to other functions and to the main program. As such, they are 
+	normally implemented using a stack. Local variables cease to exist once the function that created them is completed. They are recreated each time a function 
+	is executed or called.
+Q-29:WHAT IS GLOBAL VARIABLE IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. These variables can be accessed (ie known) by any function comprising the program. They are implemented by associating memory locations with variable names. 
+	They do not get recreated if the function is recalled.
+Q-30: WHAT IS PRIMITIVE DATA? EXPLAIN.
+ANS. Boolean values, numbers, strings and the null and undefined values all constitute Primitive data types.
+Q-31: WHAT IS COMPOUND DATA IN JAVASCRIPT? EXPLAIN.
+ANS. Compound data types are made up of more than one component. Two Primitive data types can make up other compound data. In addition to a multiple of 
+	Primitives, Compound data are made up of arrays and objects.
+Q-32: HOW MANY WAYS CAN YOU CREATE AN ARRAY AND WHAT ARE THOSE WAYS?
+ANS. We can create an array in three ways. They are:
+	Var myArray=new Array( );
+	Var myArray=new Array(“Value 1”, “Value 2”, “Value 3”, “Value 4”, “Value 5”);
+	Var myArray=new Array(dimension argument);
+Q-33: WHAT IS ARRAY PROPERTIES? 
+ANS. As an object, arrays have a single property, length.
+Q-34: WHAT IS ARRAY LENGTH IN JAVASCRIPT? EXPLAIN.
+ANS. The single array property Length returns the number of elements in an array. The property is easily passed to a variable. For example:
+	<script>
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	var a = fruits.length;
+	document.write(a);
+	</script>
+	The output will be: 4
+Q-35: WHAT IS ARRAYS.JOIN() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. The Array.join() method takes all the values in all of the elements in the array and creates one big string. For example:
+	var trees=new Array("Elm","Pine","Oak");
+	var bigBush=trees.join();
+	document.write(bigBush);
+	The output will be: Elm,Pine,Oak
+Q-36. HOW MANY ARGUMENTS IN ARRAYS.JOIN()? EXPLAIN EACH ARGUMENT.
+ANS. The Array.join() method accepts arguments that acts as separator. Whatever we place in the join() parentheses within quotation marks replaces the commas.
+	For example:
+	var bigBush = trees.join();
+	to
+	var bigBush = trees.join(" and ");
+Q-37: HOW TO CONCAT TWO ARRAYS IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. We can concate two arrays in JavaScript with concat() method. The concat() method not only join all existing elements, but it also adds the elements in a 
+	concat() argument. For example:
+	var trees=new Array("Elm","Pine","Oak");
+	var biggerBush=trees.concat("Maple","Sycamore");
+	var bigBush=trees.join(" ");
+	document.write(biggerBush);
+	alert(bigBush);
+	The output will be: An alert box showing “Elm Pine Oak” and then “Elm,Pine,Oak,Maple,Sycamore”
+Q-38.WHAT IS ARRAYS.SORT() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. The sort() method change the order of array elements alphabetically. For example:
+	<script>
+		var zoo = new Array("zebras","lions","apes","tigers");
+		zoo.sort();
+		var newZoo = "";
+		for(var counter = 0; counter < zoo.length; counter++){
+			newZoo += (zoo[counter] + "<br/>");
+		}
+		document.write("<p>Alphabetical Animals</p>" + newZoo);
+	</script>
+	The output will be: 
+	Alphabetical Animals
+	apes
+	lions
+	tigers
+	zebras
+Q-39. HOW MANY ARGUMENTS IN ARRAYS.SORT()? EXPLAIN EACH ARGUMENT.
+ANS.
+Q-40.WHAT IS ARRAYS.REVERSE() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. The reverse() method reverses the change of the order of array elements alphabetically. For example:
+	<script>
+		var zoo = new Array("zebras","lions","apes","tigers");
+		zoo.reverse();
+		var newZoo = "";
+		for(var counter = 0; counter < zoo.length; counter++){
+			newZoo += (zoo[counter] + "<br/>");
+		}
+		document.write("<p>Alphabetical Animals</p>" + newZoo);
+	</script>
+	The output will be: 
+	Alphabetical Animals
+	zebras
+	tigers
+	lions
+	apes
+Q-41. HOW MANY ARGUMENTS IN ARRAYS.REVERSE()? EXPLAIN EACH ARGUMENT.
+ANS. 
+Q-42.WHAT IS ARRAYS.SLICE() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. The slice() method in array breaks the array into a small piece. Syntex: ArrayName.slice(begin, before end). For example:
+	computer = ["Dell","Gateway","Apple","IBM","HP"];
+	computer.slice(2, 4);
+	The output will be:
+	Apple,IBM
+Q-43. HOW MANY ARGUMENTS IN ARRAYS.SLICE()? EXPLAIN EACH ARGUMENT.
+ANS. There are only two arguments in slice() method. They are: begin and before end. Syntex: ArrayName.slice(begin, before end).
+Q-44.WHAT IS ARRAYS.SPLICE() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. Ayyay.splice() is a method used to insert, delete and substitute values in array elements. This method has three arguments, start, delete and data.The 
+	starting position specifies where the new value (data) is to be inserted and where deletions begin. If no deletions are specified, the splice() method has
+	the effect of inserting an element and value into an array. For example:
+	var stackWork = new Array("Lenny","Harold","Mary","Jean","Sal");
+	stackWork.splice(1, 0, "Fred");
+	The output will be:
+	Lenny,Fred,Mary,Jean,Sal
+Q-45. HOW MANY ARGUMENTS IN ARRAYS.JOINSPLICE EXPLAIN EACH ARGUMENT.
+ANS. 
+Q-46.WHAT IS ARRAYS.SHIFT() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS.Array.shift() removes the first element in an array and returns it. For example:
+	var stackWork = new Array("Lenny","Harold","Mary","Jean","Sal");
+	stackWork.shift();
+	The output will be:
+	Harold,Mary,Jean,Sal
+Q-47. HOW MANY ARGUMENTS IN ARRAYS.SHIIFT()? EXPLAIN EACH ARGUMENT.
+ANS. There is no argument in Array.shift().
+Q-48.WHAT IS ARRAYS.UNSHIFT() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. Array.unshift()put the new element at the front of the array. For example:
+	var stackWork = new Array("Lenny","Harold","Mary","Jean","Sal");
+	stackWork.unshift("Willie");
+	The output will be:
+	Willie,Lenny,Harold,Mary,Jean,Sal
+Q-49. HOW MANY ARGUMENTS IN ARRAYS.UNSHIFT()? EXPLAIN EACH ARGUMENT.
+ANS. There is only one argument in Array.unshift(), that is new value which we want to enter in front of the array.
+Q-50.WHAT IS ARRAYS.PUSH() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. Array.push() adds a value to the end of the array and leaves it there. For example:
+	var stackWork = new Array("Lenny","Harold","Mary","Jean","Sal");
+	stackWork.push("Delia");
+	The output will be:
+	Lenny,Harold,Mary,Jean,Sal,Delia
+Q-51. HOW MANY ARGUMENTS IN ARRAYS.PUSH()? EXPLAIN EACH ARGUMENT.
+ANS. There is only one argument in Array.push(), that is new value which we want to enter to the end of the array.
+Q-52.WHAT IS ARRAYS.POP() IN JAVASCRIPT? GIVE AN EXAMPLE.
+ANS. Array.pop() removes the last element of an array and returns it. For example:
+	var stackWork = new Array("Lenny","Harold","Mary","Jean","Sal");
+	stackWork.pop();
+	The output will be:
+	Lenny,Harold,Mary,Jean
+Q-53. HOW MANY ARGUMENTS IN ARRAYS.POP()? EXPLAIN EACH ARGUMENT.
+ANS. There is no argument in Array.pop().
