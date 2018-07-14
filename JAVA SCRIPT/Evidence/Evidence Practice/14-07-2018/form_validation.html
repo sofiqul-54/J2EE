@@ -1,0 +1,95 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Form_Validation</title>
+			<style type="text/css">
+            label{
+                color: #900;
+                padding: 3px 10px;
+            }
+       		</style>
+			<script>
+				function validateForm(){
+					var username = document.forms["myform"]["username"].value;
+					var password = document.forms["myform"]["password"].value;
+					var fname = document.forms["myform"]["fname"].value;
+					var sid = document.forms["myform"]["sid"].value;
+					
+					if(username==" "){
+						document.getElementById("username").innerHTML="Username mustbe filled out";
+					return false;
+						} else if(username.length<10){
+						document.getElementById("username").innerHTML="Username mustbe filled Max 10 chracter";
+					return false;	
+						}else if (password==" "){
+						document.getElementById("password").innerHTML="Password mustbe filled out";
+					return false;		
+						}else if(password.length>6){
+						document.getElementById("password").innerHTML="Password mustbe filled Min 6 Chracters";
+					return false;				
+						}else if(fname==" "){
+						document.getElementById("fname").innerHTML="Name mustbe filled out";
+					return false;				
+						}else if(fname.length<3){
+						document.getElementById("fname").innerHTML="Name mustbe filled Min 3 Chracters ";
+					return false;	
+						}else if(sid==" "){
+						document.getElementById("sid").innerHTML="ID mustbe filled out";
+					return false;	
+							}else if(sid.length==7){
+						document.getElementById("sid").innerHTML="ID mustbe filled equel 7 Chracters ";
+					return false;		
+						}else{
+						 document.write("Name: " + username + "<br/>");
+						 document.write("Name: " + password + "<br/>");
+						 document.write("Name: " + fname + "<br/>");
+						 document.write("Name: " + sid + "<br/>");
+						 
+							}
+					}
+			</script>
+		</head>
+		
+		<body>
+			<div style="width:500px; margin:0 auto; background-color:#CCC; padding:7px;">
+				<form name="myform" action="form_validation.html" onSubmit="return validateForm()" method="post">
+					<table>
+						<tr>
+							<td>User Name</td>
+							<td>:</td>
+							<td><input type="text" name="username"/><br/>
+								<label id="username"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td>:</td>
+							<td><input type="password" name="password"/><br/>
+								<label id="password"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>Name</td>
+							<td>:</td>
+							<td><input type="text" name="fname"/><br>
+							<label id="fname"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>Id</td>
+							<td>:</td>
+							<td><input type="number" name="sid"/><br/>
+							<label id="sid"></label>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="reset" value="Reset"/></td>
+							<td></td>
+							<td><input type="submit" value="Submit"/></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</body>
+	</html>
