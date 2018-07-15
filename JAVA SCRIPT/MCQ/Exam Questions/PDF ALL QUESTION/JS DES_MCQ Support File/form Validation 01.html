@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript" >
+function validForm(){
+
+var a=document.form1.textfield.value; // document.formName.inputName.value
+var b=document.form1.textfield2.value;
+var c=document.form1.email.value;
+var d=document.form1.radio.value;
+var e=document.form1.checkbox.checked;
+var f=document.form1.checkbox2.checked;
+var g=document.form1.checkbox3.checked;
+var h=document.form1.checkbox4.checked;
+var i=document.form1.select.value;
+
+if(a=="" || a==null){
+
+alert("please enter your name")
+
+}else if(b=="" || b==null){
+
+alert("please enter your phone")
+}else if(c=="" || c==null){
+
+alert("please enter your email")
+}
+
+else if(d=="" || d==null){
+
+alert("please enter your gender")
+}
+
+else if(e=="" || e==null){
+alert("please enter your ssc")
+
+}
+else if(f=="" ||f==null){
+alert("please enter your hsc")
+
+}
+else if(g=="" ||g==null){
+alert("please enter your bba")
+
+}
+else if(h=="" ||h==null){
+alert("please enter your mba")
+
+}
+else if(i=="" ||i==null){
+alert("please enter your division")
+
+}
+
+else {
+
+var Display=window.open('','','width=600,height=600');
+message="<ul><li><b>Name:</b></li>"+a;
+message+="<li><b>Phone</b></li>"+b;
+message+="<li><b>Email</b></li>"+c;
+message+="<li><b>Gender</b></li>"+d;
+message+="<li><b>SSC</b></li>"+e;
+message+="<li><b>HSC</b></li>"+f;
+message+="<li><b>BBA</b></li>"+g;
+message+="<li><b>MBA</b></li>"+h;
+message+="<li><b>Division</b></li>"+i;
+message+="</ul>"
+Display.document.write(message);
+}
+}
+</script>
+<form id="form1" name="form1" method="post">
+  <table width="655" border="0" bgcolor="pink">
+    <tbody>
+      <tr>
+        <th width="204" scope="row">Full Name</th>
+        <td width="435"><input type="text" name="textfield" id="textfield"></td>
+      </tr>
+      <tr>
+        <th scope="row">Phone</th>
+        <td><input type="text" name="textfield2" id="textfield2"></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><input type="email" name="email" id="email"></td>
+      </tr>
+      <tr>
+        <th scope="row">Gender</th>
+        <td><input type="radio" name="radio" id="radio" value="radio">
+        <label for="radio">Male 
+          <input type="radio" name="radio" id="radio2" value="radio">
+        Female</label></td>
+      </tr>
+      <tr>
+        <th scope="row">Education</th>
+        <td><input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">SSC 
+          <input type="checkbox" name="checkbox2" id="checkbox2"> 
+          HSC 
+          <input type="checkbox" name="checkbox3" id="checkbox3"> 
+          BBA 
+          <input type="checkbox" name="checkbox4" id="checkbox4"> 
+          MBA
+        </label></td>
+      </tr>
+      <tr>
+        <th scope="row">Division</th>
+        <td><select name="select" id="select">
+          <option value="Dhaka">Dhaka</option>
+          <option value="Comilla">Comilla</option>
+          <option value="Khulna">Khulna</option>
+        </select></td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input type="button"  onClick="validForm()" name="submit" id="submit" value="Submit">  
+        <input type="reset" name="reset" id="reset" value="Reset"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>
