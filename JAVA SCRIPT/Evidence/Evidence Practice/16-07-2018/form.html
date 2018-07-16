@@ -1,0 +1,202 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Untitled Document</title>
+			<style>
+			label{
+				color:#800000;
+				}
+			</style>
+			<script>
+			function validateForm(){
+				
+				var username = document.forms["myForm"]["username"].value;
+				var password = document.forms["myForm"]["password"].value;
+				var name = document.forms["myForm"]["name"].value;
+				var id = document.forms["myForm"]["id"].value;
+				var email = document.forms["myForm"]["email"].value;
+				/*var gender = document.forms["myForm"]["gender"].value;
+				var education = document.forms["myForm"]["education"].value;
+				var dround = document.forms["myForm"]["round"].value; */
+				var comment = document.forms["myForm"]["comment"].value;
+				var age = document.forms["myForm"]["age"].value;
+				
+				if (username==""){
+					document.getElementById("iusername").innerHTML="Enter valid username";
+					return false;
+					}else
+				if (username.length<6){
+					document.getElementById("iusername").innerHTML="Username more than 6 chracter";
+					return false;
+					}else
+				if (password==""){
+					document.getElementById("ipassword").innerHTML="Enter filled out password";
+					return false;
+					}else
+				if (password.length<6){
+					document.getElementById("ipassword").innerHTML="Password more than 6 chracter";
+					return false;
+					}else
+				if (name==""){
+					document.getElementById("iname").innerHTML="Enter filled out name";
+					return false;
+					}else
+				if (id==""){
+					document.getElementById("iid").innerHTML="Enter filled out Id";
+					return false;
+					}else
+				if (id.length==7){
+					document.getElementById("iid").innerHTML="ID must be 7 digits";
+					return false;
+					}else
+				if (email==""){
+					document.getElementById("iemail").innerHTML="Enter filled out email";
+					return false;
+					}else
+				if(email.indexOf("@",0)<0){
+					document.getElementById("iemail").innerHTML="Enter @ Email";
+					return false;
+					}else
+				if(email.indexOf(".",0)<0){
+					document.getElementById("iemail").innerHTML="Enter .(dot) Email";
+					return false;
+				}else
+				
+				/*if (gender==""){
+					document.getElementById("igender").innerHTML="Enter filled out gender";
+					return false;
+					}else
+				if (education==""){
+					document.getElementById("ieducation").innerHTML="Enter filled out gender";
+					return false;
+					}else
+				if (dround==""){
+					document.getElementById("iround").innerHTML="Enter filled out gender";
+					return false;
+					}else
+				*/		
+				if (comment==""){
+					document.getElementById("icomment").innerHTML="Enter filled out gender";
+					return false;
+					}else
+				if (comment.length>10){
+					document.getElementById("icomment").innerHTML="Enter filled out gender";
+					return false;
+					}else
+				if (age==" "){
+					document.getElementById("iage").innerHTML="Enter filled out gender";
+					return false;
+					}else	
+					{
+				document.write("Name :"+ username +"<br/>");
+				document.write("Name :"+ password +"<br/>");
+				document.write("Name :"+ name +"<br/>");
+				document.write("Name :"+ id +"<br/>");
+				document.write("Name :"+ email +"<br/>");
+				/*document.write("Name :"+ gender +"<br/>");
+				document.write("Name :"+ education +"<br/>");
+				document.write("Name :"+ dround +"<br/>");*/
+				document.write("Name :"+ comment +"<br/>");
+				document.write("Name :"+ age +"<br/>");
+						} 
+				
+				}
+			</script>
+		</head>
+		
+		<body>
+			<form action="#" name="myForm" method="post" onSubmit="return validateForm()">
+			<table style="margin:0 auto; padding:7px; background-color:#CCC;">
+				<tr>
+					<td>User Name</td>
+					<td>:</td>
+					<td><input type="text" name="username"/>
+					<label id="iusername"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="password" name="password"/>
+					<label id="ipassword"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="text" name="name"/>
+					<label id="iname"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>:</td>
+					<td><input type="text" name="id"/>
+					<label id="iid"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>:</td>
+					<td><input type="email" name="email"/>
+					<label id="iemail"></label>
+					</td>
+				</tr>
+				<!---<tr>
+					<td>Gender</td>
+					<td>:</td>
+					<td><input type="radio" name="gender" value="male"/>Male
+					<input type="radio" name="gender" value="female"/>Female
+					<label id="igender"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>Education</td>
+					<td>:</td>
+					<td><input type="checkbox" name="education" value="ssc"/>SSC
+					<input type="checkbox" name="education" value="hsc"/>HSC
+					<input type="checkbox" name="education" value="bba"/>BBA
+					<input type="checkbox" name="education" value="mba"/>MBA
+					<label id="ieducation"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>Round</td>
+					<td>:</td>
+					<td><select name="dround">
+					<option>Select a Round</option>
+					<option value="Round-35">Round-35</option>
+					<option value="Round-36">Round-36</option>
+					<option value="Round-37">Round-37</option>
+					<option value="Round-38">Round-38</option>
+					<option value="Round-39">Round-39</option>
+					<option value="Round-40">Round-40</option>
+					</select>
+					<label id="iround"></label>
+					</td>
+				</tr> -->
+				<tr>
+					<td>Comment</td>
+					<td>:</td>
+					<td><textarea name="comment"></textarea>
+					<label id="icomment"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td>:</td>
+					<td><input type="date" name="age"/>
+					<label id="iage"></label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="reset" value="Reset"/></td>
+					<td></td>
+					<td><input type="submit" value="Submit"/>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</body>
+	</html>

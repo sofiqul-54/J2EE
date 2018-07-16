@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+label{
+	color:#F00;
+	}
+</style>
+<script>
+function validateForm(){
+var username = document.forms["myForm"]["username"].value;
+var pass = document.forms["myForm"]["pass"].value;
+if (username==""){
+	document.getElementById("iusername").innerHTML="Username mustbe filled out";
+	return false;
+	}else
+if (username.length<6){
+	document.getElementById("iusername").innerHTML="Username mustbe more than 5 chracters";
+	return false;
+	}else
+if (pass==""){
+	document.getElementById("ipass").innerHTML="Password mustbe filled out";
+	return false;
+	}else
+if (pass.length<6){
+	document.getElementById("ipass").innerHTML="Password mustbe more than 5 chracters";
+	return false;
+	}else{
+		document.write("Username :" + username +"<br/>");
+		document.write("Password :" + pass +"<br/>");
+		}
+}
+</script>
+</head>
+
+<body>
+<form action="#" name="myForm" method="post" onSubmit="return validateForm()">
+<table style="margin:0 auto; padding:7px; background-color:#CCC;">
+<tr>
+<td>Username</td>
+<td>:</td>
+<td><input type="text" name="username"/>
+<label id="iusername"></label></td>
+</tr>
+<tr>
+<td>Password</td>
+<td>:</td>
+<td><input type="password" name="pass"/>
+<label id="ipass"></label></td>
+</tr>
+<tr>
+<td><input type="reset" value="Reset"/></td>
+<td></td>
+<td><input type="submit" value="submit"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
