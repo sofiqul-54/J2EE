@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>print any number to any number</title>
+</head>
+
+<body>
+<script>
+function makeSum(s,e){
+	var sum=0;
+	var s = prompt("Enter First Number")
+	var e = prompt("Enter Last Number")
+if(s<e){
+	for(i=s; i<=e; i++){
+		sum+=i;
+		}
+	}else{
+		for(i=s; i>=e; i--){
+			sum+=i;
+			}
+		}
+		document.write(makeSum);
+}
+
+</script>
+</body>
+</html>

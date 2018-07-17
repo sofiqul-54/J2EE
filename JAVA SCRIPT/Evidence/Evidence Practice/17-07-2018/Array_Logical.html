@@ -1,0 +1,45 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Array_Logical</title>
+		</head>
+		
+		<body>
+			<script>
+				var con = ["BO", "JP", "IND", "PAK", "UK"];
+				document.write(con)
+				
+				document.write("<hr/>");
+				
+				con.sort();
+				var newCon = "";
+				for(var counter=0; counter<con.length; counter++){
+					newCon+=(con[counter]+"<br/>");
+					}
+					document.write(newCon);
+					
+				document.write("<hr/>");
+				
+				con.reverse();
+				var newCon = "";
+				for(var counter=0; counter<con.length; counter++){
+					newCon+=(con[counter]+"<br/>");
+					}
+					document.write(newCon);
+				
+				document.write("<hr/>");
+				
+				var con1=con.sort()
+				document.write(con1);
+				
+				document.write("<hr/>");
+				
+				var con2=con.reverse()
+				document.write(con2);
+				
+				document.write("<hr/>");
+				
+			</script>
+		</body>
+	</html>

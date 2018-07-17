@@ -1,0 +1,86 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Form Validation</title>
+			<style>
+			label{
+				color:#F00;
+				}
+			</style>
+			<script>
+				function validateForm(){
+					var gender = document.forms["myForm"]["gender"].value;
+					var iedu = "";
+					if(document.forms["myForm"].ssc.checked){
+						iedu+=" "+document.forms["myForm"]["ssc"].value;
+						}
+					if(document.forms["myForm"].hsc.checked){
+						iedu+=","+document.forms["myForm"]["hsc"].value;
+						}
+					var sround = document.forms["myForm"]["dround"].value;
+						
+					if(gender==""){
+						document.getElementById("igender").innerHTML="Gender mustbe filled out"
+						return false;
+						}else
+						if (!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked) {
+                    document.getElementById('iedu').innerHTML = "Tell Me Your education";
+                    return false;
+                } else
+			if(sround=="Select a Round"){
+						document.getElementById("iround").innerHTML="Gender mustbe filled out"
+						return false;
+						}else{
+					document.write("<h2>Gender: "+gender+"</h2>");
+					document.write("<h2>Education: "+iedu+"</h2>");
+					document.write("<h2>Round: "+sround+"</h2>");
+							}
+					}
+			</script>
+		</head>
+		
+		<body>
+			<form action="#" name="myForm" method="post" onSubmit="return validateForm()">
+				<table style="margin:0 auto; padding:10px; background-color:#CCC;">
+					<tr>
+						<td>Gender</td>
+						<td>:</td>
+						<td><input type="radio" name="gender" value="Male"/>Male
+						<input type="radio" name="gender" value="Female"/>Female
+						<label id="igender"></label>
+						</td>
+					</tr>
+					<tr>
+						<td>Education</td>
+						<td>:</td>
+						<td><input type="checkbox" value="SSC" name="ssc"/>SSC
+						<input type="checkbox" value="HSC" name="hsc"/>HSC
+						<label id="iedu"></label>
+						</td>
+					</tr>
+					<tr>
+						<td>Round</td>
+						<td>:</td>
+						<td>
+						<select name="dround">
+						<option>Select a Round</option>
+						<option value="Round - 35">Round - 35</option>
+						<option value="Round - 36">Round - 36</option>
+						<option value="Round - 37">Round - 37</option>
+						<option value="Round - 38">Round - 38</option>
+						<option value="Round - 39">Round - 39</option>
+						<option value="Round - 40">Round - 40</option>
+						</select>
+						<label id="iround"></label>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="Reset"/></td>
+						<td></td>
+						<td><input type="submit" value="Submit"/></td>
+					</tr>
+				</table>
+			</form>
+		</body>
+	</html>
