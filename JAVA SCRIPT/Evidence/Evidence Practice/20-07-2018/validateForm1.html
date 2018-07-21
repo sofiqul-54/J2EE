@@ -1,0 +1,84 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Untitled Document</title>
+            <style>
+            	label{
+					color:#F00;
+					}
+            </style>
+            
+            <script>
+            	function validateForm(){
+					var vgen = document.forms["myForm"]["gen"].value;
+					var vedu = "";
+						if (document.forms["myForm"].ssc.checked){
+							vedu+=document.forms["myForm"]["ssc"].value;
+							}
+						if (document.forms["myForm"].hsc.checked){
+							vedu+=" , "+document.forms["myForm"]["hsc"].value;
+							}
+					var vrou = document.forms["myForm"]["srou"].value;
+					
+					if(vgen==""){
+						document.getElementById("igen").innerHTML="Select a gender";
+						return false;
+						}else
+					if(!document.forms["myForm"].hsc.checked && !document.forms["myForm"].hsc.checked){
+						document.getElementById("iedu").innerHTML="Select Education";
+						return false;
+						}else
+					if(vrou=="select a Round"){
+						document.getElementById("irou").innerHTML="Select a round";
+						return false;
+						}else{
+						
+						document.write("<h3>Gender :"+vgen+"</h3>");
+						document.write("<h3>Education :"+vedu+"</h3>");
+						document.write("<h3>Education :"+vrou+"</h3>");
+							}
+					}
+            </script>
+        </head>
+        
+        <body>
+        	<form action="#" name="myForm" method="post" onSubmit="return validateForm()">
+            	<table style="margin:0 auto; padding:10px; background-color:#CFF;">
+                	<tr>
+                    	<td>Gender</td>
+                        <td>:</td>
+                        <td><input type="radio" name="gen" value="Male"/>Male
+                        	<input type="radio" name="gen" value="Female"/>Female</td>
+                        <td><label id="igen"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Education</td>
+                        <td>:</td>
+                        <td><input type="checkbox" name="ssc" value="SSC"/>SSC
+                        <input type="checkbox" name="hsc" value="HSC"/>HSC</td>
+                        <td><label id="iedu"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Round</td>
+                        <td>:</td>
+                        <td>
+                        <select name="srou">
+                        	<option>select a Round</option>
+                           <option value="Round-35">Round-35</option>
+                           <option value="Round-36">Round-36</option>
+                           <option value="Round-37">Round-37</option>
+                        </select>
+                        </td>
+                        <td><label id="irou"></label></td>
+                    </tr>
+                    <tr>
+                    <td><input type="reset" value="Reset"/></td>
+                    <td></td>
+                    <td><input type="submit" value="Submit"/></td>
+                    <td></td>
+                    </tr>
+                </table>
+            </form>
+        </body>
+    </html>

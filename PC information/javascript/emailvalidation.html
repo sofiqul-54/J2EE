@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<title>function</title>
+</head>
+
+<body>
+	
+	<form style="background-color:gray;width:500px;margin:100px;">
+		<table>
+		
+		<tr>
+			<td>Email</td>
+			<td>:</td>
+			<td><input type="text" id="email" placeholder="Enter Email"/></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td><input type="button"  value="Check" onclick="m1()"/>
+			
+			</td>
+		</tr>
+		
+		
+		
+		</table>
+	</form>
+	<script>
+		
+		var email;
+		var win;
+		
+		
+		function m1(){
+		if(emailValidation()){
+			win=window.open("","my window","left=100,top=200,width=500,height=400");
+			win.document.write("Email is:"+email);
+			}
+		}
+		
+		
+		
+		function emailValidation(){
+			email=document.getElementById("email").value;
+			if(email.match(/^[a-zA-Z0-9_]+\@[a-z]+\.[a-z]{2,3}$/)){
+				return true;
+			}
+			else{
+				alert("email not match");
+				return false;
+			}
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<title>function</title>
+</head>
+
+<body>
+	
+	<form style="background-color:gray;width:500px;margin:100px;">
+		<table>
+		<tr>
+			<td>P iD</td>
+			<td>:</td>
+			<td><input type="text" id="id" class="wd" placeholder="Enter id"/></td>
+		</tr>
+		<tr>
+			<td>P Name</td>
+			<td>:</td>
+			<td><input type="text" id="name" class="wd" placeholder="Enter Name"/></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>:</td>
+			<td><input type="text" id="email" class="wd"  placeholder="Enter Email"/></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td><input type="button"  value="Submit" onclick="m1()"/>
+			<input type="reset"  value="Reset" onclick="m2()"/>
+			</td>
+		</tr>
+		
+		
+		
+		</table>
+	</form>
+	<script>
+		var id;
+		var name;
+		var email;
+		var win;
+		
+		
+		function m1(){
+		if(idValidation()&&nameValidation()&&emailValidation()){
+			win=window.open("","my window","left=100,top=200,width=500,height=400");
+			win.document.write("P id is:"+id+"<br>"+"P Name is:"+name+"<br>"+"Email is:"+email);
+			}
+		}
+		function m2(){
+		win.close();
+		}
+		function idValidation(){
+			id=document.getElementById("id").value;
+			if(id.match(/^[0-9]{5,7}$/)){
+				return true;
+			}
+			else{
+				alert("id not match");
+				return false;
+			}
+		}	
+		function nameValidation(){
+			name=document.getElementById("name").value;
+			if(name.match(/^[A-Za-z]{5,12}$/)){
+				return true;
+			}
+			else{
+				alert("name not match");
+				return false;
+			}
+		}
+		function emailValidation(){
+			email=document.getElementById("email").value;
+			if(email.match(/^[a-zA-Z0-9_]+\@[a-z]+\.[a-z]{2,3}$/)){
+				return true;
+			}
+			else{
+				alert("email not match");
+				return false;
+			}
+		}
+		
+	</script>
+</body>
+</html>

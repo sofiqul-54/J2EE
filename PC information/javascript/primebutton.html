@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Prime Number</title>
+		
+	</head>
+	<body>
+		<script>
+		function m1()
+		{
+			var c=0;
+			var v1=parseInt(document.getElementById("t1").value);
+			for(var n=v1;n>=1;n--)
+			{
+				if(v1%n==0)
+					{
+						c++;
+					}
+			}
+			if(c==2)
+			{
+				document.getElementById("t2").value=" The Number is Prime";
+			}
+			else
+			{
+				document.getElementById("t2").value="The Number is Not Prime";
+			}
+		}
+		</script>
+		<input type="text" id="t1"><br><br>
+		<input type="button" value="go" onclick="m1()"><br><br> 
+		<input type="text" id="t2"><br>
+	</body>
+</html>
+
+
+
+
