@@ -1,0 +1,198 @@
+<!doctype html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Untitled Document</title>
+            <style>
+            	label{
+					color:#800000;
+					}
+            </style>
+            
+            <script>
+			var win;
+			function closeWindow(){
+				win.close();
+				}
+            	function validateForm(){
+					var vusername = document.forms["myForm"]["username"].value;
+					var vpassword = document.forms["myForm"]["password"].value;
+					var vname = document.forms["myForm"]["name"].value;
+					var vid = document.forms["myForm"]["id"].value;
+					var gender = document.forms["myForm"]["gen"].value;
+					var veducation = "";
+						if(document.forms["myForm"].ssc.checked){
+							veducation+=document.forms["myForm"]["ssc"].value;}
+						if(document.forms["myForm"].hsc.checked){
+							veducation+=","+document.forms["myForm"]["hsc"].value;}
+					var vround = document.forms["myForm"]["dround"].value;
+					var vemail = document.forms["myForm"]["email"].value;
+					var vage = document.forms["myForm"]["age"].value;
+					
+					
+					if(vusername==""){
+						document.getElementById("iusername").innerHTML="Mustbe filled out username";
+						return false;
+						}						
+					else if(vusername.length<6){
+						document.getElementById("iusername").innerHTML="Mustbe 6 character";
+						return false;
+						}else{
+							document.getElementById("iusername").innerHTML=" ";
+							}
+						
+						
+					if(vpassword==""){
+						document.getElementById("ipassword").innerHTML="Mustbe filled out Password";
+						return false;
+						}
+					else if(vpassword.length<6){
+						document.getElementById("ipassword").innerHTML="Minimum 6 character";
+						return false;
+						}else{
+							document.getElementById("ipassword").innerHTML=" ";
+							}
+						
+					if(vname==""){
+						document.getElementById("iname").innerHTML="Mustbe filled out Name";
+						return false;
+						}else{
+							document.getElementById("iname").innerHTML=" ";
+							}
+					if(vid==""){
+						document.getElementById("iid").innerHTML="Mustbe filled out valid ID";
+						return false;
+						}else{
+							document.getElementById("iid").innerHTML=" ";
+							}
+					if(gender==""){
+						document.getElementById("igen").innerHTML="Mustbe Select Gender";
+						return false;
+						}else{
+							document.getElementById("igen").innerHTML=" ";
+							}
+					if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){
+						document.getElementById("ieducation").innerHTML="Select Education";
+						return false;
+						}else{
+							document.getElementById("ieducation").innerHTML=" ";
+							}	
+					if(vround=="Select a Round"){
+						document.getElementById("iround").innerHTML="Mustbe Select Round";
+						return false;
+						}else{
+							document.getElementById("iround").innerHTML=" ";
+							}
+					if(vemail==""){
+						document.getElementById("iemail").innerHTML="Mustbe filled out valid Email";
+						return false;
+						}else{
+							document.getElementById("iemail").innerHTML=" ";
+							}
+						
+					if(vage==""){
+						document.getElementById("iage").innerHTML="Mustbe filled out Age";
+						return false;
+						}
+						else{
+							document.getElementById("iage").innerHTML=" ";
+							
+					win=window.open("", "", "width=400");
+					win.document.write("<h2><center>Form Output</center></h2><hr>")
+					win.document.write("<h3>Username :"+vusername+"</h3>");
+					win.document.write("<h3>Password :"+ vpassword +"</h3>");
+					win.document.write("<h3>Name :"+vname+"</h3>");
+					win.document.write("<h3>ID :"+vid+"</h3>");
+					win.document.write("<h3>Gender :"+gender+"</h3>");
+					win.document.write("<h3>Education :"+veducation+"</h3>");
+					win.document.write("<h3>Round :"+vround+"</h3>");
+					win.document.write("<h3>Email :"+vemail+"</h3>");
+					win.document.write("<h3>Age :"+vage+"</h3>");
+							}
+					}
+     </script>
+        </head>
+        
+        <body>
+		<div style="margin:0 auto; padding:20px; background-color:#CCC; width:400px;">
+        	 <form name="myForm">
+            	<table>
+                	<tr>
+                    	<td>Username</td>
+                        <td>:</td>
+                        <td><input type="text" name="username"/></td>
+                        <td><label id="iusername"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Password</td>
+                        <td>:</td>
+                        <td><input type="password" name="password"/></td>
+                        <td><label id="ipassword"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Name</td>
+                        <td>:</td>
+                        <td><input type="text" name="name"/></td>
+                        <td><label id="iname"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>ID</td>
+                        <td>:</td>
+                        <td><input type="number" name="id"/></td>
+                        <td><label id="iid"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Gender</td>
+                        <td>:</td>
+                        <td>
+                      	<input type="radio" name="gen" value="Male">Male
+                        <input type="radio" name="gen" value="Femail">Femail
+                        
+                        </td>
+                        <td><label id="igen"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Education</td>
+                        <td>:</td>
+                        <td><input type="checkbox" name="ssc" value="SSC"/>SSC
+                        <input type="checkbox" name="hsc" value="HSC"/>HSC</td>
+                        <td><label id="ieducation"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Round</td>
+                        <td>:</td>
+                        <td>
+                        	<select name="dround">
+                        		<option>Select a Round</option>
+                                <option value="Round-35">Round-35</option>
+                                <option value="Round-36">Round-36</option>
+                                <option value="Round-37">Round-37</option>
+                                <option value="Round-38">Round-38</option>
+                                <option value="Round-39">Round-39</option>
+                                <option value="Round-40">Round-40</option>
+                        	</select>
+                        </td>
+                        <td><label id="iround"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Email</td>
+                        <td>:</td>
+                        <td><input type="email" name="email"/></td> 
+                        <td><label id="iemail"></label></td>
+                    </tr>
+                    <tr>
+                    	<td>Date of Birth</td>
+                        <td>:</td>
+                        <td><input type="date" name="age"/></td>
+                        <td><label id="iage"></label></td>
+                    </tr>
+                </table>
+            </form>
+			
+			<center>
+			<button onClick="closeWindow()">Reset</button>
+			<button onClick="validateForm()">Submit</button>
+			</center>
+		</div>
+        </body>
+    </html>
