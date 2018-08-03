@@ -1,0 +1,97 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>traineeData</title>
+        </head>
+        
+        <body>
+        	<div style="margin:0 auto; width:400px;">
+            	<form name="myForm">
+                	<table>
+                    	<tr>
+                        	<td>Name</td>
+                            <td>:</td>
+                            <td><input type="text" name="name"/></td>
+                        </tr>
+                        <tr>
+                        	<td>Contact</td>
+                            <td>:</td>
+                            <td><input type="text" name="contact"/></td>
+                        </tr>
+                        <tr>
+                        	<td>Remarks</td>
+                            <td>:</td>
+                            <td><textarea name="remarks"></textarea></td>
+                        </tr>
+                        <tr>
+                        	<td>Sex</td>
+                            <td>:</td>
+                            <td>
+                            	<input type="radio" name="sex" value="Male"/>Male
+                                <input type="radio" name="sex" value="Female"/>Female
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>Courses</td>
+                            <td>:</td>
+                            <td>
+                            	<input type="checkbox" name="nt" value="NT"/>NT
+                                <input type="checkbox" name="asid" value="ASID"/>ASID
+                                <input type="checkbox" name="ddd" value="DDD"/>DDD                               
+                                <input type="checkbox" name="esad" value="ESAD"/>ESAD
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>Location</td>
+                            <td>:</td>
+                            <td>
+                            	<select name="location">
+                                	<option>Select a location</option>
+                                    <option value="Dhanmondi">Dhanmondi</option>
+                                    <option value="Basundhara">Basundhara</option>
+                                    <option value="Mirpur">Mirpur</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <center>
+                	<button onClick="traineeData()">Submit</button>
+                </center>
+            </div>
+            
+            <script>
+            	function traineeData(){
+					var vname = document.forms["myForm"]["name"].value;
+					var vcontact = document.forms["myForm"]["contact"].value;
+					var vremarks = document.forms["myForm"]["remarks"].value;
+					var vsex = document.forms["myForm"]["sex"].value;
+					var vcourses ="";
+						if(document.forms["myForm"].nt.checked){
+							vcourses+=document.forms["myForm"]["nt"].value;
+							}
+						if(document.forms["myForm"].asid.checked){
+							vcourses+=" "+document.forms["myForm"]["asid"].value;
+							}
+						if(document.forms["myForm"].ddd.checked){
+							vcourses+=" "+document.forms["myForm"]["ddd"].value;
+							}
+						if(document.forms["myForm"].esad.checked){
+							vcourses+=" "+document.forms["myForm"]["esad"].value;
+							}
+					var vlocation = document.forms["myForm"]["location"].value;
+					
+					win=window.open("", "", "width=400");
+					win.document.write("<h2><center>Form Output</center></h2><hr>");
+					
+					win.document.write("Name :"+vname+"<br>");
+					win.document.write("Contact :"+vcontact+"<br>");
+					win.document.write("Remarks :"+vremarks+"<br>");
+					win.document.write("Sex :"+vsex+"<br>");
+					win.document.write("Courses :"+vcourses+"<br>");
+					win.document.write("Location :"+vlocation+"<br>");
+					}
+            </script>
+        </body>
+    </html>

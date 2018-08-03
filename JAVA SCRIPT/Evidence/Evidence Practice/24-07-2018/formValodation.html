@@ -1,0 +1,118 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>validateForm</title>
+            <style>
+            label{
+				color:#F00;
+				}
+            </style>
+        </head>
+        
+        <body>
+        	<div style="width:400px; margin:0 auto; padding:10px; background-color:#CCC;">
+            	<form name="myForm">
+                	<table>
+                    	<tr>
+                        	<td>Gender</td>
+                            <td>:</td>
+                            <td>
+                            <input type="radio" name="gender" value="Male"/>Male
+                            <input type="radio" name="gender" value="Female"/>Female
+                            </td>
+                            <td><label id="igen"></label></td>
+                        </tr>
+                        <tr>
+                        	<td>Education</td>
+                            <td>:</td>
+                            <td>
+                            <input type="checkbox" name="ssc" value="SSC"/>SSC
+                            <input type="checkbox" name="hsc" value="HSC"/>HSC
+                            </td>
+                            <td><label id="iedu"></label></td>
+                        </tr>
+                        <tr>
+                        	<td>Email</td>
+                            <td>:</td>
+                            <td><input type="email" name="emal"/></td>
+                            <td><label id="iemal"></label></td>
+                        </tr>
+                        <tr>
+                        	<td>Round</td>
+                            <td>:</td>
+                            <td>
+                            	<select name="sround">
+                                <option>Select a round</option>
+                                <option value="Round-35">Round-35</option>
+                                <option value="Round-36">Round-36</option>
+                                <option value="Round-37">Round-37</option>
+                                </select>
+                            </td>
+                            <td><label id="iround"></label></td>
+                        </tr>
+                    </table>
+                </form>
+                <center>
+                <button onClick="closeWindow()">Reset</button>
+                <button onClick="validateForm()">Submit</button>
+                </center>
+            </div>
+            
+            <script>
+            	var win;
+				function closeWindow(){
+					win.close();
+					}
+				function validateForm(){
+					var vgen = document.forms["myForm"]["gender"].value;
+					var vedu =" ";
+						if(document.forms["myForm"].ssc.checked){
+							vedu+=document.forms["myForm"]["ssc"].value;
+							}
+						if(document.forms["myForm"].hsc.checked){
+							vedu+=","+document.forms["myForm"]["hsc"].value;
+							}
+						var vemal = document.forms["myForm"]["emal"].value;
+						var vround = document.forms["myForm"]["sround"].value;
+						
+						
+						if (vgen==""){
+							document.getElementById("igen").innerHTML="Mustbe select Gender";
+							return false;
+							}else {
+							document.getElementById("igen").innerHTML=" ";
+								}
+							if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){document.getElementById("iedu").innerHTML="Tell me your education";
+							return false;
+							}else {
+							document.getElementById("iedu").innerHTML=" ";	
+								}
+						if (vemal==""){
+							document.getElementById("iemal").innerHTML="Enter a valid email";
+							return false;
+							}else if(vemal.indexOf("@",0)<0){
+							document.getElementById("iemal").innerHTML="Enter '@'";
+							return false;	
+								}else if(vemal.indexOf(".",0)<0){document.getElementById("iemal").innerHTML="Enter (.)dot";
+								return false;
+								}else{
+									document.getElementById("iemal").innerHTML=" ";
+									}
+						if (vround=="Select a round"){
+							document.getElementById("iround").innerHTML="Select a round";
+							return false;
+							}else{
+							document.getElementById("iround").innerHTML=" ";
+							win=window.open("","","width=400");
+							win.document.write("<h2><center>Form Output</center></h2><hr>");
+							
+						win.document.write("Gender :" +vgen+"<br/>"); 
+						win.document.write("Education :" +vedu+"<br/>"); 	
+						win.document.write("Email :" +vemal+"<br/>");
+						win.document.write("Round :" +vround+"<br/>");  
+								}
+					}
+            </script>
+        </body>
+    </html>
